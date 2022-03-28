@@ -61,16 +61,28 @@ class HomePageViewController: UIViewController {
         foodCollectionView.collectionViewLayout = foodTasarim
         
         HomeRouter.createModule(ref: self)
-        homepagePresenterOnject?.showFoods()
+        
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        homepagePresenterOnject?.showFoods()
+    }
+    
     
 }
+
+
+
 
 extension HomePageViewController : PresenterToViewHomePageProtocol
 {
     func sendDataToView(foods: Array<Foods>) {
-        self.foodList = foods
+        
+            self.foodList = foods
+            DispatchQueue.main.async {
+                self.foodCollectionView.reloadData()
+            }
+       
         
     }
     
@@ -112,10 +124,9 @@ extension HomePageViewController : UICollectionViewDelegate, UICollectionViewDat
         }else{
             let food = foodList[indexPath.row]
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodCell", for: indexPath) as! FoodsCollectionViewCell
-            cell.foodNameLabel.text = food.foodName!
-            cell.foodDecsLabel.text = food.foodDescription!
-            cell.foodPriceLabel.text = "$\(food.foodPrice!)"
-            cell.foodImageview.image = UIImage(named: "\(food.foodImage!)")
+            cell.foodNameLabel.text = food.yemek_adi!
+            cell.foodPriceLabel.text = "$\(food.yemek_fiyat!)"
+           // cell.foodImageview.image = UIImage(named: food.yemek_resim_adi!)
             
            
             cell.contentView.layer.cornerRadius = 17
