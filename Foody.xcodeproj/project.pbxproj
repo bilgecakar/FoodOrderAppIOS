@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19211D7E27F1CF1E00722CBA /* FoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19211D7D27F1CF1E00722CBA /* FoodsCollectionViewCell.swift */; };
+		19211D8027F1D2D600722CBA /* Foods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19211D7F27F1D2D600722CBA /* Foods.swift */; };
 		1969F40127F0729B002CB376 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969F40027F0729B002CB376 /* AppDelegate.swift */; };
 		1969F40327F0729B002CB376 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969F40227F0729B002CB376 /* SceneDelegate.swift */; };
 		1969F40527F0729B002CB376 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969F40427F0729B002CB376 /* LoginViewController.swift */; };
@@ -60,6 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19211D7D27F1CF1E00722CBA /* FoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsCollectionViewCell.swift; sourceTree = "<group>"; };
+		19211D7F27F1D2D600722CBA /* Foods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foods.swift; sourceTree = "<group>"; };
 		1969F3FD27F0729B002CB376 /* Foody.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foody.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1969F40027F0729B002CB376 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1969F40227F0729B002CB376 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 				1969F40227F0729B002CB376 /* SceneDelegate.swift */,
 				1969F40427F0729B002CB376 /* LoginViewController.swift */,
 				1969F40627F0729B002CB376 /* Main.storyboard */,
+				19211D7D27F1CF1E00722CBA /* FoodsCollectionViewCell.swift */,
 				1969F45F27F0F123002CB376 /* CategoryCollectionViewCell.swift */,
 				1969F45D27F0EA93002CB376 /* CustomTabBarController.swift */,
 				1969F45927F0C8A1002CB376 /* RegisterViewController.swift */,
@@ -160,6 +165,7 @@
 				1969F40B27F072A0002CB376 /* LaunchScreen.storyboard */,
 				1969F40E27F072A0002CB376 /* Info.plist */,
 				1969F46127F0F2AD002CB376 /* Categories.swift */,
+				19211D7F27F1D2D600722CBA /* Foods.swift */,
 			);
 			path = Foody;
 			sourceTree = "<group>";
@@ -362,8 +368,10 @@
 				1969F40127F0729B002CB376 /* AppDelegate.swift in Sources */,
 				1969F45E27F0EA93002CB376 /* CustomTabBarController.swift in Sources */,
 				1969F40327F0729B002CB376 /* SceneDelegate.swift in Sources */,
+				19211D8027F1D2D600722CBA /* Foods.swift in Sources */,
 				1969F45C27F0DA26002CB376 /* HomePageViewController.swift in Sources */,
 				1969F46027F0F123002CB376 /* CategoryCollectionViewCell.swift in Sources */,
+				19211D7E27F1CF1E00722CBA /* FoodsCollectionViewCell.swift in Sources */,
 				1969F45A27F0C8A1002CB376 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
