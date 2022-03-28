@@ -15,6 +15,8 @@ class HomePageViewController: UIViewController {
     var categoryList = [Categories]()
     var foodList = [Foods]()
     
+    var homepagePresenterOnject : ViewToPresenterHomePageProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,16 +36,6 @@ class HomePageViewController: UIViewController {
         categoryList.append(burger)
         categoryList.append(noodle)
         
-        
-        let foodOne = Foods(foodId: 1, foodName: "Honey Garlic Salmon", foodDescription: "Honey, Garlic, Lime", foodPrice: 89, foodImage: "Meal2")
-        let foodTwo = Foods(foodId: 2, foodName: "Cheesy Rice Beans", foodDescription: "Rice, Beans, Orange", foodPrice: 34, foodImage: "Meal2")
-        let foodThree = Foods(foodId: 3, foodName: "Honey Garlic Salmon", foodDescription: "Honey, Garlic, Lime", foodPrice: 89, foodImage: "Meal2")
-        let foodFour = Foods(foodId: 4, foodName: "Cheesy Rice Beans", foodDescription: "Rice, Beans, Orange", foodPrice: 34, foodImage: "Meal2")
-        
-        foodList.append(foodOne)
-        foodList.append(foodTwo)
-        foodList.append(foodThree)
-        foodList.append(foodFour)
         
         
         
@@ -68,7 +60,20 @@ class HomePageViewController: UIViewController {
         foodTasarim.itemSize = CGSize(width: cellWidht, height: cellWidht*0.4)
         foodCollectionView.collectionViewLayout = foodTasarim
         
+        HomeRouter.createModule(ref: self)
+        homepagePresenterOnject?.showFoods()
+        
     }
+    
+}
+
+extension HomePageViewController : PresenterToViewHomePageProtocol
+{
+    func sendDataToView(foods: Array<Foods>) {
+        self.foodList = foods
+        
+    }
+    
     
 }
 

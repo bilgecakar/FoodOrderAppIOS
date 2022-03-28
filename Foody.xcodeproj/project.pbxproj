@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		19211D7E27F1CF1E00722CBA /* FoodsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19211D7D27F1CF1E00722CBA /* FoodsCollectionViewCell.swift */; };
 		19211D8027F1D2D600722CBA /* Foods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19211D7F27F1D2D600722CBA /* Foods.swift */; };
+		19211D8A27F1EABA00722CBA /* HomePageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19211D8927F1EABA00722CBA /* HomePageProtocols.swift */; };
+		19211D8C27F1EE7A00722CBA /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19211D8B27F1EE7A00722CBA /* HomeInteractor.swift */; };
+		19211D8E27F1EEBD00722CBA /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19211D8D27F1EEBD00722CBA /* HomePresenter.swift */; };
+		19211D9027F1EEF100722CBA /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19211D8F27F1EEF100722CBA /* HomeRouter.swift */; };
 		1969F40127F0729B002CB376 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969F40027F0729B002CB376 /* AppDelegate.swift */; };
 		1969F40327F0729B002CB376 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969F40227F0729B002CB376 /* SceneDelegate.swift */; };
 		1969F40527F0729B002CB376 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969F40427F0729B002CB376 /* LoginViewController.swift */; };
@@ -64,6 +68,10 @@
 /* Begin PBXFileReference section */
 		19211D7D27F1CF1E00722CBA /* FoodsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsCollectionViewCell.swift; sourceTree = "<group>"; };
 		19211D7F27F1D2D600722CBA /* Foods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foods.swift; sourceTree = "<group>"; };
+		19211D8927F1EABA00722CBA /* HomePageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageProtocols.swift; sourceTree = "<group>"; };
+		19211D8B27F1EE7A00722CBA /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		19211D8D27F1EEBD00722CBA /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		19211D8F27F1EEF100722CBA /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		1969F3FD27F0729B002CB376 /* Foody.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foody.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1969F40027F0729B002CB376 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1969F40227F0729B002CB376 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,9 +136,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19211D8127F1E9C000722CBA /* homepage-module */ = {
+			isa = PBXGroup;
+			children = (
+				19211D8727F1EA3800722CBA /* collectionView */,
+				19211D8627F1EA2E00722CBA /* view */,
+				19211D8527F1EA2500722CBA /* router */,
+				19211D8427F1EA1B00722CBA /* presenter */,
+				19211D8327F1EA0D00722CBA /* interactor */,
+				19211D8227F1E9F300722CBA /* protocols */,
+			);
+			path = "homepage-module";
+			sourceTree = "<group>";
+		};
+		19211D8227F1E9F300722CBA /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				19211D8927F1EABA00722CBA /* HomePageProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		19211D8327F1EA0D00722CBA /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				19211D8B27F1EE7A00722CBA /* HomeInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		19211D8427F1EA1B00722CBA /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				19211D8D27F1EEBD00722CBA /* HomePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		19211D8527F1EA2500722CBA /* router */ = {
+			isa = PBXGroup;
+			children = (
+				19211D8F27F1EEF100722CBA /* HomeRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		19211D8627F1EA2E00722CBA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				1969F45B27F0DA26002CB376 /* HomePageViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		19211D8727F1EA3800722CBA /* collectionView */ = {
+			isa = PBXGroup;
+			children = (
+				1969F45F27F0F123002CB376 /* CategoryCollectionViewCell.swift */,
+				19211D7D27F1CF1E00722CBA /* FoodsCollectionViewCell.swift */,
+			);
+			path = collectionView;
+			sourceTree = "<group>";
+		};
+		19211D8827F1EA7800722CBA /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				1969F46127F0F2AD002CB376 /* Categories.swift */,
+				19211D7F27F1D2D600722CBA /* Foods.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
 		1969F3F427F0729A002CB376 = {
 			isa = PBXGroup;
 			children = (
+				19211D8827F1EA7800722CBA /* entity */,
+				19211D8127F1E9C000722CBA /* homepage-module */,
 				1969F3FF27F0729B002CB376 /* Foody */,
 				1969F41627F072A0002CB376 /* FoodyTests */,
 				1969F42027F072A1002CB376 /* FoodyUITests */,
@@ -153,19 +234,14 @@
 			children = (
 				1969F43027F0B0BF002CB376 /* Fonts */,
 				1969F40027F0729B002CB376 /* AppDelegate.swift */,
-				1969F45B27F0DA26002CB376 /* HomePageViewController.swift */,
 				1969F40227F0729B002CB376 /* SceneDelegate.swift */,
 				1969F40427F0729B002CB376 /* LoginViewController.swift */,
 				1969F40627F0729B002CB376 /* Main.storyboard */,
-				19211D7D27F1CF1E00722CBA /* FoodsCollectionViewCell.swift */,
-				1969F45F27F0F123002CB376 /* CategoryCollectionViewCell.swift */,
 				1969F45D27F0EA93002CB376 /* CustomTabBarController.swift */,
 				1969F45927F0C8A1002CB376 /* RegisterViewController.swift */,
 				1969F40927F072A0002CB376 /* Assets.xcassets */,
 				1969F40B27F072A0002CB376 /* LaunchScreen.storyboard */,
 				1969F40E27F072A0002CB376 /* Info.plist */,
-				1969F46127F0F2AD002CB376 /* Categories.swift */,
-				19211D7F27F1D2D600722CBA /* Foods.swift */,
 			);
 			path = Foody;
 			sourceTree = "<group>";
@@ -366,10 +442,14 @@
 				1969F40527F0729B002CB376 /* LoginViewController.swift in Sources */,
 				1969F46227F0F2AD002CB376 /* Categories.swift in Sources */,
 				1969F40127F0729B002CB376 /* AppDelegate.swift in Sources */,
+				19211D8C27F1EE7A00722CBA /* HomeInteractor.swift in Sources */,
 				1969F45E27F0EA93002CB376 /* CustomTabBarController.swift in Sources */,
 				1969F40327F0729B002CB376 /* SceneDelegate.swift in Sources */,
 				19211D8027F1D2D600722CBA /* Foods.swift in Sources */,
 				1969F45C27F0DA26002CB376 /* HomePageViewController.swift in Sources */,
+				19211D8A27F1EABA00722CBA /* HomePageProtocols.swift in Sources */,
+				19211D9027F1EEF100722CBA /* HomeRouter.swift in Sources */,
+				19211D8E27F1EEBD00722CBA /* HomePresenter.swift in Sources */,
 				1969F46027F0F123002CB376 /* CategoryCollectionViewCell.swift in Sources */,
 				19211D7E27F1CF1E00722CBA /* FoodsCollectionViewCell.swift in Sources */,
 				1969F45A27F0C8A1002CB376 /* RegisterViewController.swift in Sources */,
