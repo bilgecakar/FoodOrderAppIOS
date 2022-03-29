@@ -564,7 +564,7 @@
         <scene sceneID="sDs-wW-Rkx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G5k-er-0eC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="HomeIcon" id="W1E-zs-Wkl">
+                    <tabBarItem key="tabBarItem" title="" image="homekit" catalog="system" id="W1E-zs-Wkl">
                         <color key="badgeColor" name="OrangeColor"/>
                     </tabBarItem>
                     <toolbarItems/>
@@ -592,7 +592,7 @@
                         <viewLayoutGuide key="safeArea" id="Ydm-6Z-6y9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="Search" id="BMW-c5-iq9"/>
+                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="BMW-c5-iq9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wnE-06-0P5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -608,7 +608,7 @@
                         <viewLayoutGuide key="safeArea" id="1S8-cP-uMa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="ShopCart" id="0jl-W0-A0C"/>
+                    <tabBarItem key="tabBarItem" title="" image="cart.fill" catalog="system" id="0jl-W0-A0C"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IaA-mY-SQV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -624,7 +624,7 @@
                         <viewLayoutGuide key="safeArea" id="G5h-D1-nm9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="Account" id="mq4-Zc-iVp"/>
+                    <tabBarItem key="tabBarItem" title="" image="person" catalog="system" id="mq4-Zc-iVp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wz9-SK-TSR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -655,13 +655,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Account" width="36" height="36"/>
         <image name="FoodIconsBg" width="2500" height="979"/>
-        <image name="HomeIcon" width="36" height="36"/>
         <image name="Pizza" width="32" height="32"/>
-        <image name="Search" width="32" height="32"/>
-        <image name="ShopCart" width="36" height="36"/>
         <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
+        <image name="homekit" catalog="system" width="128" height="106"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <image name="suit.heart" catalog="system" width="128" height="109"/>
         <namedColor name="DarkOrange">
             <color red="0.89399999380111694" green="0.55299997329711914" blue="0.44699999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
