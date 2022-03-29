@@ -48,6 +48,8 @@
 		1969F45E27F0EA93002CB376 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969F45D27F0EA93002CB376 /* CustomTabBarController.swift */; };
 		1969F46027F0F123002CB376 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969F45F27F0F123002CB376 /* CategoryCollectionViewCell.swift */; };
 		1969F46227F0F2AD002CB376 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969F46127F0F2AD002CB376 /* Categories.swift */; };
+		197E34B327F2F9730023D763 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 197E34B227F2F9730023D763 /* Kingfisher */; };
+		197E34B527F2FFCD0023D763 /* FoodsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197E34B427F2FFCD0023D763 /* FoodsDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,7 @@
 		1969F45D27F0EA93002CB376 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		1969F45F27F0F123002CB376 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		1969F46127F0F2AD002CB376 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		197E34B427F2FFCD0023D763 /* FoodsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				197E34B327F2F9730023D763 /* Kingfisher in Frameworks */,
 				19211D9827F2472700722CBA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +246,7 @@
 				1969F40227F0729B002CB376 /* SceneDelegate.swift */,
 				1969F40427F0729B002CB376 /* LoginViewController.swift */,
 				1969F40627F0729B002CB376 /* Main.storyboard */,
+				197E34B427F2FFCD0023D763 /* FoodsDetailViewController.swift */,
 				1969F45D27F0EA93002CB376 /* CustomTabBarController.swift */,
 				1969F45927F0C8A1002CB376 /* RegisterViewController.swift */,
 				1969F40927F072A0002CB376 /* Assets.xcassets */,
@@ -312,6 +317,7 @@
 			name = Foody;
 			packageProductDependencies = (
 				19211D9727F2472700722CBA /* Alamofire */,
+				197E34B227F2F9730023D763 /* Kingfisher */,
 			);
 			productName = Foody;
 			productReference = 1969F3FD27F0729B002CB376 /* Foody.app */;
@@ -387,6 +393,7 @@
 			mainGroup = 1969F3F427F0729A002CB376;
 			packageReferences = (
 				19211D9627F2472700722CBA /* XCRemoteSwiftPackageReference "Alamofire" */,
+				197E34B127F2F9730023D763 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 1969F3FE27F0729B002CB376 /* Products */;
 			projectDirPath = "";
@@ -457,6 +464,7 @@
 				19211D8C27F1EE7A00722CBA /* HomeInteractor.swift in Sources */,
 				1969F45E27F0EA93002CB376 /* CustomTabBarController.swift in Sources */,
 				1969F40327F0729B002CB376 /* SceneDelegate.swift in Sources */,
+				197E34B527F2FFCD0023D763 /* FoodsDetailViewController.swift in Sources */,
 				19211D8027F1D2D600722CBA /* Foods.swift in Sources */,
 				1969F45C27F0DA26002CB376 /* HomePageViewController.swift in Sources */,
 				19211D8A27F1EABA00722CBA /* HomePageProtocols.swift in Sources */,
@@ -822,6 +830,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		197E34B127F2F9730023D763 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -829,6 +845,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 19211D9627F2472700722CBA /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		197E34B227F2F9730023D763 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 197E34B127F2F9730023D763 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

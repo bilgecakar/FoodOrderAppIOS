@@ -404,6 +404,21 @@
             </objects>
             <point key="canvasLocation" x="2857.971014492754" y="862.5"/>
         </scene>
+        <!--Foods Detail View Controller-->
+        <scene sceneID="0iO-Zf-DGh">
+            <objects>
+                <viewController id="aF5-gS-TeX" customClass="FoodsDetailViewController" customModule="Foody" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v9D-32-2A8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TkR-aP-FxB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JdW-CN-qwu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3633" y="863"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="YpS-vQ-3uG">
             <objects>

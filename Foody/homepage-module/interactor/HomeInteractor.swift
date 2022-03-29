@@ -32,7 +32,6 @@ class HomeInteractor : PresenterToInteractorHomaPageProtocol
             }
         }
         
-        //homepagePresenter?.sendDataToPresenter(foods: foodList)
     }
     
 }

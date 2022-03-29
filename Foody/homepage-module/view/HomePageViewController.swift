@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomePageViewController: UIViewController {
     
@@ -126,7 +127,14 @@ extension HomePageViewController : UICollectionViewDelegate, UICollectionViewDat
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodCell", for: indexPath) as! FoodsCollectionViewCell
             cell.foodNameLabel.text = food.yemek_adi!
             cell.foodPriceLabel.text = "$\(food.yemek_fiyat!)"
-           // cell.foodImageview.image = UIImage(named: food.yemek_resim_adi!)
+            if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(food.yemek_resim_adi!)")
+            {
+                DispatchQueue.main.async {
+                    cell.foodImageview.kf.setImage(with : url)
+                    
+                }
+            }
+          
             
            
             cell.contentView.layer.cornerRadius = 17
@@ -144,4 +152,5 @@ extension HomePageViewController : UICollectionViewDelegate, UICollectionViewDat
         
         
     }
+    
 }
