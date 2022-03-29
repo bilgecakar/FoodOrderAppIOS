@@ -135,7 +135,7 @@ extension HomePageViewController : UICollectionViewDelegate, UICollectionViewDat
             let food = foodList[indexPath.row]
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodCell", for: indexPath) as! FoodsCollectionViewCell
             cell.foodNameLabel.text = food.yemek_adi!
-            cell.foodPriceLabel.text = "$\(food.yemek_fiyat!)"
+            cell.foodPriceLabel.text = "\(food.yemek_fiyat!)₺"
             if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(food.yemek_resim_adi!)")
             {
                 DispatchQueue.main.async {
