@@ -69,6 +69,15 @@ class HomePageViewController: UIViewController {
         homepagePresenterOnject?.showFoods()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toFoodDetail" {
+            let food = sender as? Foods
+            let destinationVC = segue.destination as! FoodsDetailViewController
+            destinationVC.food = food
+        }
+    }
+    
+    
     
 }
 
@@ -79,11 +88,11 @@ extension HomePageViewController : PresenterToViewHomePageProtocol
 {
     func sendDataToView(foods: Array<Foods>) {
         
-            self.foodList = foods
-            DispatchQueue.main.async {
-                self.foodCollectionView.reloadData()
-            }
-       
+        self.foodList = foods
+        DispatchQueue.main.async {
+            self.foodCollectionView.reloadData()
+        }
+        
         
     }
     
@@ -99,7 +108,7 @@ extension HomePageViewController : UICollectionViewDelegate, UICollectionViewDat
         }else{
             return foodList.count
         }
-       
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -134,9 +143,9 @@ extension HomePageViewController : UICollectionViewDelegate, UICollectionViewDat
                     
                 }
             }
-          
             
-           
+            
+            
             cell.contentView.layer.cornerRadius = 17
             cell.contentView.layer.borderColor = UIColor.clear.cgColor
             cell.contentView.layer.masksToBounds = true;
@@ -152,5 +161,18 @@ extension HomePageViewController : UICollectionViewDelegate, UICollectionViewDat
         
         
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == foodCollectionView
+        {
+            let food = foodList[indexPath.row]
+            performSegue(withIdentifier: "toFoodDetail", sender: food)
+            
+            
+        }
+    }
+    
+    
     
 }

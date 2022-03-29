@@ -260,5 +260,193 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9F796A3B-4744-4CC9-B631-9712C7D0C287"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Foody/foodDetail-module/view/FoodsDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "FoodsDetailViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "9F796A3B-4744-4CC9-B631-9712C7D0C287 - 5802e1c9843351c9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Foody.FoodsDetailViewController.food.getter : Swift.Optional&lt;Foody.Foods&gt;"
+                  moduleName = "Foody"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bilgecakar/Documents/GitHub/FoodOrderAppIOS/Foody/foodDetail-module/view/FoodsDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  uuid = "9F796A3B-4744-4CC9-B631-9712C7D0C287 - c72064cb37469dc5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Foody.FoodsDetailViewController.food.setter : Swift.Optional&lt;Foody.Foods&gt;"
+                  moduleName = "Foody"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bilgecakar/Documents/GitHub/FoodOrderAppIOS/Foody/foodDetail-module/view/FoodsDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "9F796A3B-4744-4CC9-B631-9712C7D0C287 - 446995c93a0bfb3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Foody.FoodsDetailViewController.food.modify : Swift.Optional&lt;Foody.Foods&gt;"
+                  moduleName = "Foody"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bilgecakar/Documents/GitHub/FoodOrderAppIOS/Foody/foodDetail-module/view/FoodsDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  uuid = "9F796A3B-4744-4CC9-B631-9712C7D0C287 - 1b86c150d8b930b4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Foody.FoodsDetailViewController.food.modify : Swift.Optional&lt;Foody.Foods&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Foody"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bilgecakar/Documents/GitHub/FoodOrderAppIOS/Foody/foodDetail-module/view/FoodsDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "15">
+               </Location>
+               <Location
+                  uuid = "9F796A3B-4744-4CC9-B631-9712C7D0C287 - 52aaa89c712252d4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Foody.FoodsDetailViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Foody.FoodsDetailViewController"
+                  moduleName = "Foody"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bilgecakar/Documents/GitHub/FoodOrderAppIOS/Foody/foodDetail-module/view/FoodsDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "551">
+               </Location>
+               <Location
+                  uuid = "9F796A3B-4744-4CC9-B631-9712C7D0C287 - 3ed9c74f77b67bcf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Foody.FoodsDetailViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Foody.FoodsDetailViewController&gt;"
+                  moduleName = "Foody"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bilgecakar/Documents/GitHub/FoodOrderAppIOS/Foody/foodDetail-module/view/FoodsDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "508">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "27E5D3CA-8D62-4341-A68C-8EAB2187783D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Foody/foodDetail-module/view/FoodsDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "27E5D3CA-8D62-4341-A68C-8EAB2187783D - b9d76ba0f1856415"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Foody.FoodsDetailViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Foody"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bilgecakar/Documents/GitHub/FoodOrderAppIOS/Foody/foodDetail-module/view/FoodsDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "429">
+               </Location>
+               <Location
+                  uuid = "27E5D3CA-8D62-4341-A68C-8EAB2187783D - b9d76ba0f1856415"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Foody.FoodsDetailViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "Foody"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bilgecakar/Documents/GitHub/FoodOrderAppIOS/Foody/foodDetail-module/view/FoodsDetailViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "471">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4858806D-25A2-4D00-8C74-2A66C06F0DE8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Foody/foodDetail-module/view/FoodsDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C54C10F4-C999-4ADA-ABA3-87B4AB30C9F0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Foody/foodDetail-module/view/FoodsDetailViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
