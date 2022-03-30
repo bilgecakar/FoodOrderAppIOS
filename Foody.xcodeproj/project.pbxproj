@@ -15,6 +15,12 @@
 		19211D9027F1EEF100722CBA /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19211D8F27F1EEF100722CBA /* HomeRouter.swift */; };
 		19211D9827F2472700722CBA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 19211D9727F2472700722CBA /* Alamofire */; };
 		19211D9A27F24C3500722CBA /* FoodsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19211D9927F24C3500722CBA /* FoodsResponse.swift */; };
+		1966CA4827F442D9001E1568 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1966CA4727F442D9001E1568 /* CartViewController.swift */; };
+		1966CA4A27F4430D001E1568 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1966CA4927F4430D001E1568 /* CartTableViewCell.swift */; };
+		1966CA5327F44398001E1568 /* CartProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1966CA5227F44398001E1568 /* CartProtocols.swift */; };
+		1966CA5527F443A6001E1568 /* CartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1966CA5427F443A6001E1568 /* CartInteractor.swift */; };
+		1966CA5727F443B3001E1568 /* CartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1966CA5627F443B3001E1568 /* CartPresenter.swift */; };
+		1966CA5927F443BF001E1568 /* CartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1966CA5827F443BF001E1568 /* CartRouter.swift */; };
 		1969F40127F0729B002CB376 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969F40027F0729B002CB376 /* AppDelegate.swift */; };
 		1969F40327F0729B002CB376 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969F40227F0729B002CB376 /* SceneDelegate.swift */; };
 		1969F40527F0729B002CB376 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969F40427F0729B002CB376 /* LoginViewController.swift */; };
@@ -83,6 +89,12 @@
 		19211D8D27F1EEBD00722CBA /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		19211D8F27F1EEF100722CBA /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		19211D9927F24C3500722CBA /* FoodsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsResponse.swift; sourceTree = "<group>"; };
+		1966CA4727F442D9001E1568 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		1966CA4927F4430D001E1568 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		1966CA5227F44398001E1568 /* CartProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProtocols.swift; sourceTree = "<group>"; };
+		1966CA5427F443A6001E1568 /* CartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartInteractor.swift; sourceTree = "<group>"; };
+		1966CA5627F443B3001E1568 /* CartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPresenter.swift; sourceTree = "<group>"; };
+		1966CA5827F443BF001E1568 /* CartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartRouter.swift; sourceTree = "<group>"; };
 		1969F3FD27F0729B002CB376 /* Foody.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foody.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1969F40027F0729B002CB376 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1969F40227F0729B002CB376 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -230,6 +242,67 @@
 			path = entity;
 			sourceTree = "<group>";
 		};
+		1966CA4B27F44314001E1568 /* cart-module */ = {
+			isa = PBXGroup;
+			children = (
+				1966CA5127F4434D001E1568 /* tableview */,
+				1966CA5027F4433F001E1568 /* view */,
+				1966CA4F27F4433A001E1568 /* router */,
+				1966CA4E27F44332001E1568 /* presenter */,
+				1966CA4D27F44328001E1568 /* interactor */,
+				1966CA4C27F44321001E1568 /* protocols */,
+			);
+			path = "cart-module";
+			sourceTree = "<group>";
+		};
+		1966CA4C27F44321001E1568 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				1966CA5227F44398001E1568 /* CartProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		1966CA4D27F44328001E1568 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1966CA5427F443A6001E1568 /* CartInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		1966CA4E27F44332001E1568 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1966CA5627F443B3001E1568 /* CartPresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		1966CA4F27F4433A001E1568 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				1966CA5827F443BF001E1568 /* CartRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		1966CA5027F4433F001E1568 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				1966CA4727F442D9001E1568 /* CartViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		1966CA5127F4434D001E1568 /* tableview */ = {
+			isa = PBXGroup;
+			children = (
+				1966CA4927F4430D001E1568 /* CartTableViewCell.swift */,
+			);
+			path = tableview;
+			sourceTree = "<group>";
+		};
 		1969F3F427F0729A002CB376 = {
 			isa = PBXGroup;
 			children = (
@@ -253,6 +326,7 @@
 		1969F3FF27F0729B002CB376 /* Foody */ = {
 			isa = PBXGroup;
 			children = (
+				1966CA4B27F44314001E1568 /* cart-module */,
 				197E34B627F31BE70023D763 /* foodDetail-module */,
 				19211D8827F1EA7800722CBA /* entity */,
 				19211D8127F1E9C000722CBA /* homepage-module */,
@@ -527,18 +601,24 @@
 				1969F46227F0F2AD002CB376 /* Categories.swift in Sources */,
 				19211D9A27F24C3500722CBA /* FoodsResponse.swift in Sources */,
 				197E34BF27F324740023D763 /* FoodDetailInteractor.swift in Sources */,
+				1966CA5327F44398001E1568 /* CartProtocols.swift in Sources */,
 				1969F40127F0729B002CB376 /* AppDelegate.swift in Sources */,
 				197E34C327F3258C0023D763 /* FoodDetailRouter.swift in Sources */,
 				19211D8C27F1EE7A00722CBA /* HomeInteractor.swift in Sources */,
 				197E34C527F327EF0023D763 /* FoodsDetail.swift in Sources */,
 				1969F45E27F0EA93002CB376 /* CustomTabBarController.swift in Sources */,
+				1966CA5527F443A6001E1568 /* CartInteractor.swift in Sources */,
 				1969F40327F0729B002CB376 /* SceneDelegate.swift in Sources */,
 				197E34B527F2FFCD0023D763 /* FoodsDetailViewController.swift in Sources */,
 				19211D8027F1D2D600722CBA /* Foods.swift in Sources */,
 				1969F45C27F0DA26002CB376 /* HomePageViewController.swift in Sources */,
 				19211D8A27F1EABA00722CBA /* HomePageProtocols.swift in Sources */,
+				1966CA4827F442D9001E1568 /* CartViewController.swift in Sources */,
+				1966CA4A27F4430D001E1568 /* CartTableViewCell.swift in Sources */,
+				1966CA5927F443BF001E1568 /* CartRouter.swift in Sources */,
 				197E34BD27F31DD70023D763 /* FoodDetailProtocols.swift in Sources */,
 				19211D9027F1EEF100722CBA /* HomeRouter.swift in Sources */,
+				1966CA5727F443B3001E1568 /* CartPresenter.swift in Sources */,
 				19211D8E27F1EEBD00722CBA /* HomePresenter.swift in Sources */,
 				197E34C727F328FD0023D763 /* FoodDetailResponse.swift in Sources */,
 				1969F46027F0F123002CB376 /* CategoryCollectionViewCell.swift in Sources */,

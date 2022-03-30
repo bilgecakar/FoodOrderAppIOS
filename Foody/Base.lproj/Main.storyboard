@@ -648,10 +648,10 @@
             </objects>
             <point key="canvasLocation" x="4234.7826086956529" y="73.660714285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Cart View Controller-->
         <scene sceneID="uaZ-6V-ZjB">
             <objects>
-                <viewController id="tmA-Du-I5D" sceneMemberID="viewController">
+                <viewController id="tmA-Du-I5D" customClass="CartViewController" customModule="Foody" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FVh-cQ-0Ky">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -663,7 +663,7 @@
                                     <constraint firstAttribute="height" constant="500" id="swI-JY-47R"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="117" id="dzl-fu-ekx">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cartCell" rowHeight="117" id="dzl-fu-ekx">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="117"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dzl-fu-ekx" id="vJS-w1-ZaS">
@@ -744,7 +744,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IaA-mY-SQV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5192.753623188406" y="93.75"/>
+            <point key="canvasLocation" x="5200" y="74"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mjp-3a-GME">
@@ -805,7 +805,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wz9-SK-TSR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6078" y="94"/>
+            <point key="canvasLocation" x="6077" y="74"/>
         </scene>
         <!--Custom Tab Bar Controller-->
         <scene sceneID="tNt-UE-TEP">
