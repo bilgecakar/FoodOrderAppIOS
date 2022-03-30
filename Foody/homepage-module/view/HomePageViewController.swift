@@ -53,10 +53,11 @@ class HomePageViewController: UIViewController {
         let foodTasarim = UICollectionViewFlowLayout()
         foodTasarim.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         foodTasarim.minimumLineSpacing = 15 //Dikey
+        foodTasarim.minimumInteritemSpacing = 10
         
         let width = foodCollectionView.frame.size.width
-        let cellWidht = (width-20)
-        foodTasarim.itemSize = CGSize(width: cellWidht, height: cellWidht*0.4)
+        let cellWidht = (width-30) / 2
+        foodTasarim.itemSize = CGSize(width: cellWidht, height: cellWidht*1.1)
         foodCollectionView.collectionViewLayout = foodTasarim
         
         HomeRouter.createModule(ref: self)
