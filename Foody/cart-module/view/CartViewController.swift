@@ -29,7 +29,7 @@ class CartViewController: UIViewController {
     
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         cartPresenterObject?.showAllCart()
     }
     
