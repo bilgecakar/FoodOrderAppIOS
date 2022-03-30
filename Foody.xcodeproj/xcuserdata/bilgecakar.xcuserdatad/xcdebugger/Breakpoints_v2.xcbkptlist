@@ -276,7 +276,7 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "9F796A3B-4744-4CC9-B631-9712C7D0C287 - 5802e1c9843351c9"
+                  uuid = "9F796A3B-4744-4CC9-B631-9712C7D0C287 - 5802e1c9843351a8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -286,12 +286,12 @@
                   urlString = "file:///Users/bilgecakar/Documents/GitHub/FoodOrderAppIOS/Foody/foodDetail-module/view/FoodsDetailViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
                   offsetFromSymbolStart = "90">
                </Location>
                <Location
-                  uuid = "9F796A3B-4744-4CC9-B631-9712C7D0C287 - c72064cb37469dc5"
+                  uuid = "9F796A3B-4744-4CC9-B631-9712C7D0C287 - c72064cb37469da4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -301,8 +301,8 @@
                   urlString = "file:///Users/bilgecakar/Documents/GitHub/FoodOrderAppIOS/Foody/foodDetail-module/view/FoodsDetailViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
                   offsetFromSymbolStart = "116">
                </Location>
                <Location
@@ -321,7 +321,7 @@
                   offsetFromSymbolStart = "27">
                </Location>
                <Location
-                  uuid = "9F796A3B-4744-4CC9-B631-9712C7D0C287 - 1b86c150d8b930b4"
+                  uuid = "9F796A3B-4744-4CC9-B631-9712C7D0C287 - 1b86c150d8b930d5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -331,12 +331,12 @@
                   urlString = "file:///Users/bilgecakar/Documents/GitHub/FoodOrderAppIOS/Foody/foodDetail-module/view/FoodsDetailViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
                   offsetFromSymbolStart = "15">
                </Location>
                <Location
-                  uuid = "9F796A3B-4744-4CC9-B631-9712C7D0C287 - 52aaa89c712252d4"
+                  uuid = "9F796A3B-4744-4CC9-B631-9712C7D0C287 - 52aaa89c712252b5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -346,12 +346,12 @@
                   urlString = "file:///Users/bilgecakar/Documents/GitHub/FoodOrderAppIOS/Foody/foodDetail-module/view/FoodsDetailViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "551">
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "586">
                </Location>
                <Location
-                  uuid = "9F796A3B-4744-4CC9-B631-9712C7D0C287 - 3ed9c74f77b67bcf"
+                  uuid = "9F796A3B-4744-4CC9-B631-9712C7D0C287 - 3ed9c74f77b67bae"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -361,9 +361,9 @@
                   urlString = "file:///Users/bilgecakar/Documents/GitHub/FoodOrderAppIOS/Foody/foodDetail-module/view/FoodsDetailViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "508">
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "543">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -384,7 +384,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "27E5D3CA-8D62-4341-A68C-8EAB2187783D - b9d76ba0f1856415"
+                  uuid = "27E5D3CA-8D62-4341-A68C-8EAB2187783D - b9d76ba0f18563f6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -394,12 +394,12 @@
                   urlString = "file:///Users/bilgecakar/Documents/GitHub/FoodOrderAppIOS/Foody/foodDetail-module/view/FoodsDetailViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "429">
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "433">
                </Location>
                <Location
-                  uuid = "27E5D3CA-8D62-4341-A68C-8EAB2187783D - b9d76ba0f1856415"
+                  uuid = "27E5D3CA-8D62-4341-A68C-8EAB2187783D - b9d76ba0f18563f6"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -409,9 +409,9 @@
                   urlString = "file:///Users/bilgecakar/Documents/GitHub/FoodOrderAppIOS/Foody/foodDetail-module/view/FoodsDetailViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
-                  offsetFromSymbolStart = "471">
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "475">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -445,6 +445,86 @@
             startingLineNumber = "35"
             endingLineNumber = "35"
             landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5BFBD9A9-8440-4FCA-96D6-826B2A4D0B62"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Foody/cart-module/view/CartViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "payment(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "331D7F2B-9B4E-4CF7-A59A-BE136478818C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Foody/cart-module/view/CartViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2BA1E5F5-4B68-4B49-AC9A-CADF282A84E0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Foody/cart-module/view/CartViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6C762612-ADA3-44BF-BF26-AC07BA165E40"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Foody/cart-module/view/CartViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "627FF47B-0A77-42C9-B2C8-4F57C2B168D5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Foody/cart-module/view/CartViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

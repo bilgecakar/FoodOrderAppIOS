@@ -328,8 +328,8 @@
 			children = (
 				1966CA4B27F44314001E1568 /* cart-module */,
 				197E34B627F31BE70023D763 /* foodDetail-module */,
-				19211D8827F1EA7800722CBA /* entity */,
 				19211D8127F1E9C000722CBA /* homepage-module */,
+				19211D8827F1EA7800722CBA /* entity */,
 				1969F43027F0B0BF002CB376 /* Fonts */,
 				1969F40027F0729B002CB376 /* AppDelegate.swift */,
 				1969F40227F0729B002CB376 /* SceneDelegate.swift */,

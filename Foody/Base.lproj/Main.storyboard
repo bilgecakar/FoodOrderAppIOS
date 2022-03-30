@@ -809,6 +809,7 @@
                     <tabBarItem key="tabBarItem" title="" image="cart" catalog="system" id="0jl-W0-A0C"/>
                     <connections>
                         <outlet property="cartTableview" destination="nuU-cr-lzK" id="tbP-S9-Tvf"/>
+                        <outlet property="foodTotalPrice" destination="i6y-hx-dfv" id="mxA-5A-4sC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IaA-mY-SQV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
