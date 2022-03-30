@@ -18,8 +18,9 @@ class FoodsDetailViewController: UIViewController {
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var foodPriceLabel: UILabel!
     @IBOutlet weak var foodNameLabel: UILabel!
-    
     @IBOutlet weak var foodImageview: UIImageView!
+    
+    var count : Int = 1
     var food : Foods?
     
     var foodDetailPresenterObject : ViewToPresenterFoodDetailProtocol?
@@ -50,7 +51,51 @@ class FoodsDetailViewController: UIViewController {
         minusButton.layer.cornerRadius = 10
         addToCartButton.layer.cornerRadius = 10
         favoriteButton.layer.cornerRadius = 20
+        
     }
     
+    @IBAction func increaseCount(_ sender: Any) {
+        add()
+    }
+    
+    @IBAction func decreaseCount(_ sender: Any) {
+       subtract()
+    }
+    
+    @IBAction func addCart(_ sender: Any) {
+        if let f = food{
+            foodDetailPresenterObject?.addAllCart(yemek_adi: f.yemek_adi!, yemek_fiyat: f.yemek_fiyat!, yemek_resim_adi: f.yemek_resim_adi!, yemek_siparis_adet: String(count), kullanici_adi: "Blg")
+            
+            let alert = UIAlertController(title: "Add To Cart", message: "\(f.yemek_adi!) added to cart!", preferredStyle: .alert)
+                      let OKAction = UIAlertAction(title: "Okay", style: .default){ action in
+                          
+                      }
+                      alert.addAction(OKAction)
 
+                      
+                      self.present(alert, animated: true)
+            
+        }
+    }
+    
+    
+    func add()
+    {
+        if count >= 1 && count < 20
+        {
+            count += 1
+        }
+        countLabel.text = "\(count)"
+    }
+    
+    func subtract()
+    {
+        if count > 1 && count <= 20
+        {
+            count -= 1
+        }
+        countLabel.text = "\(count)"
+    }
+    
+    
 }

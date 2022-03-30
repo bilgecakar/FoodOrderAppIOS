@@ -461,6 +461,9 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="-"/>
+                                        <connections>
+                                            <action selector="decreaseCount:" destination="aF5-gS-TeX" eventType="touchUpInside" id="kFY-nc-Nui"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXg-Yg-Z7M">
                                         <rect key="frame" x="43" y="0.0" width="33" height="31"/>
@@ -474,6 +477,9 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                        <connections>
+                                            <action selector="increaseCount:" destination="aF5-gS-TeX" eventType="touchUpInside" id="5fG-SF-23I"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -505,6 +511,9 @@
                                         <buttonConfiguration key="configuration" style="plain" image="cart" catalog="system" imagePlacement="trailing" title="Add to cart" imagePadding="5">
                                             <fontDescription key="titleFontDescription" name="Poppins-Light" family="Poppins" pointSize="19"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addCart:" destination="aF5-gS-TeX" eventType="touchUpInside" id="KVY-mQ-xBZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
