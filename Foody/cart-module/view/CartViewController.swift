@@ -16,6 +16,9 @@ class CartViewController: UIViewController {
     var cartFoods = [FoodsDetail]()
     var cartPresenterObject : ViewToPresenterCartProtocol?
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,7 +46,7 @@ extension CartViewController : PresenterToViewCartProtocol
     func sendDataToView(cartList: Array<FoodsDetail>) {
         self.cartFoods = cartList
         var total = 0
-        
+        var urunSayisi = 0
         DispatchQueue.main.async {
             
             self.cartFoods.forEach{   cart_food in
@@ -52,6 +55,14 @@ extension CartViewController : PresenterToViewCartProtocol
                 
             }
             
+            self.cartFoods.forEach{   cart_food in
+                
+                urunSayisi = urunSayisi  + Int(cart_food.yemek_siparis_adet!)!
+                
+               
+            }
+            
+            print(urunSayisi)
             
             self.foodTotalPrice.text = "₺\(total)"
             self.cartTableview.reloadData()
@@ -86,6 +97,31 @@ extension CartViewController : UITableViewDelegate, UITableViewDataSource
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+            
+            let deleteAction = UIContextualAction(style: .destructive, title: ""){(contextualAction,view,bool) in
+                let cart = self.cartFoods[indexPath.row]
+                
+                let alert = UIAlertController(title: "Are you sure want to delete \(cart.yemek_adi!)?", message: "You cannot undo this action", preferredStyle: .alert)
+                
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel){ action in }
+                alert.addAction(cancelAction)
+                
+                let yesAction = UIAlertAction(title: "Yes", style: .destructive){ action in
+                    self.cartPresenterObject?.deleteAllCart(sepet_yemek_id: cart.sepet_yemek_id!, kullanici_adi: "Blg")
+                }
+                alert.addAction(yesAction)
+                
+                self.present(alert, animated: true)
+            }
+            deleteAction.backgroundColor = UIColor(named: "ButtonColor")
+            deleteAction.image = UIImage(named: "Delete.png")
+            
+            
+            return UISwipeActionsConfiguration(actions: [deleteAction])
+            
+        }
     
 }
 

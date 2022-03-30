@@ -38,8 +38,6 @@ class HomePageViewController: UIViewController {
         categoryList.append(noodle)
         
         
-        
-        
         //Category collectionview tasarim
         let categoryTasarim = UICollectionViewFlowLayout()
         categoryTasarim.sectionInset = UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 10)
