@@ -23,13 +23,38 @@ class HomeInteractor : PresenterToInteractorHomaPageProtocol
                     if let answerList = answer.yemekler {
                         list = answerList
                     }
-                    print(list)
+                    
                     self.homepagePresenter?.sendDataToPresenter(foods: list)
                 } catch {
                     print(error.localizedDescription)
                     
                 }
             }
+        }
+        
+    }
+    
+    func showFoodCount() {
+        let param : Parameters = ["kullanici_adi" : "Blg"]
+        
+        AF.request("http://kasimadalan.pe.hu/yemekler/sepettekiYemekleriGetir.php", method: .post, parameters: param).responseJSON{ response in
+            if let data = response.data
+            {
+                do {
+                    let answer = try JSONDecoder().decode(FoodDetailResponse.self, from: data)
+                    var list = [FoodsDetail]()
+                    if let answerList = answer.sepet_yemekler
+                    {
+                        list = answerList
+                    }
+                    print(list)
+                    self.homepagePresenter?.sendDataTopRresenter(foodCount: list.count);
+                    
+                } catch  {
+                    print(error.localizedDescription)
+                }
+            }
+            
         }
         
     }

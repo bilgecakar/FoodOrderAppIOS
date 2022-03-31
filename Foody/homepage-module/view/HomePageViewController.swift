@@ -16,6 +16,7 @@ class HomePageViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var categoryList = [Categories]()
     var foodList = [Foods]()
+   
     
     var homepagePresenterOnject : ViewToPresenterHomePageProtocol?
     
@@ -30,7 +31,7 @@ class HomePageViewController: UIViewController {
         
         activityIndicator.startAnimating()
       
-
+      
         
         let pizza = Categories(image: "Pizza")
         let iceCream = Categories(image: "IceCream")
@@ -71,6 +72,8 @@ class HomePageViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         homepagePresenterOnject?.showFoods()
+        homepagePresenterOnject?.showFoodCount()
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -90,14 +93,21 @@ class HomePageViewController: UIViewController {
 
 extension HomePageViewController : PresenterToViewHomePageProtocol
 {
+    
+    func sendDataToView(foodCount: Int) {
+        self.tabBarController?.tabBar.items![2].badgeValue = "\(foodCount)"
+        self.tabBarController?.tabBar.items![2].badgeColor = UIColor(named: "SecondyColor")
+    }
+    
+    
     func sendDataToView(foods: Array<Foods>) {
         
         self.foodList = foods
         DispatchQueue.main.async {
-            
            
             self.foodCollectionView.reloadData()
             self.activityIndicator.stopAnimating() //For Start Activity Indicator
+           
         }
         
         

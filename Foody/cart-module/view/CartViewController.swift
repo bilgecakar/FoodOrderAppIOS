@@ -16,7 +16,7 @@ class CartViewController: UIViewController {
     var cartFoods = [FoodsDetail]()
     var cartPresenterObject : ViewToPresenterCartProtocol?
     
-
+    var foodsCount = 0
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,12 +24,14 @@ class CartViewController: UIViewController {
         cartTableview.dataSource = self
         
         
+       
         CartRouter.createModule(ref: self)
     
     }
     
     override func viewWillAppear(_ animated: Bool) {
         cartPresenterObject?.showAllCart()
+        
     }
     
         
@@ -54,18 +56,11 @@ extension CartViewController : PresenterToViewCartProtocol
                 
             }
             
-            self.cartFoods.forEach{   cart_food in
-                
-                self.tabBarController?.tabBar.items![2].badgeValue = "\(total)"
-                self.tabBarController?.tabBar.items![2].badgeColor = UIColor(named: "SecondyColor")
-                
-               
-            }
-            
-        
+            self.tabBarController?.tabBar.items![2].badgeValue = "\(self.cartFoods.count)"
             
             self.foodTotalPrice.text = "₺\(total)"
             self.cartTableview.reloadData()
+            
         }
     }
     

@@ -69,14 +69,14 @@ class FoodsDetailViewController: UIViewController {
             
             let alert = UIAlertController(title: "Add To Cart", message: "\(f.yemek_adi!) added to cart!", preferredStyle: .alert)
                       let OKAction = UIAlertAction(title: "Okay", style: .default){ action in
-                          
+                          self.navigationController?.popToRootViewController(animated: true)
                       }
                       alert.addAction(OKAction)
 
                       
                       self.present(alert, animated: true)
             
-            tabBarController?.tabBar.items![2].badgeValue = "\(count)"
+            
             
         }
     }
