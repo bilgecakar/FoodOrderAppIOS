@@ -459,8 +459,48 @@
 		1989F35F27F638E500C31F9A /* register-module */ = {
 			isa = PBXGroup;
 			children = (
+				1989F36427F6394600C31F9A /* view */,
+				1989F36327F6393C00C31F9A /* router */,
+				1989F36227F6393400C31F9A /* presenter */,
+				1989F36127F6392900C31F9A /* interactor */,
+				1989F36027F6392100C31F9A /* protocols */,
 			);
 			path = "register-module";
+			sourceTree = "<group>";
+		};
+		1989F36027F6392100C31F9A /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		1989F36127F6392900C31F9A /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		1989F36227F6393400C31F9A /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		1989F36327F6393C00C31F9A /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		1989F36427F6394600C31F9A /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
