@@ -62,6 +62,13 @@
 		197E34C327F3258C0023D763 /* FoodDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197E34C227F3258C0023D763 /* FoodDetailRouter.swift */; };
 		197E34C527F327EF0023D763 /* FoodsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197E34C427F327EF0023D763 /* FoodsDetail.swift */; };
 		197E34C727F328FD0023D763 /* FoodDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197E34C627F328FD0023D763 /* FoodDetailResponse.swift */; };
+		1989F35127F6340200C31F9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1989F35027F6340100C31F9A /* GoogleService-Info.plist */; };
+		1989F35427F6360100C31F9A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 1989F35327F6360100C31F9A /* FirebaseAuth */; };
+		1989F35627F6360100C31F9A /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 1989F35527F6360100C31F9A /* FirebaseAuthCombine-Community */; };
+		1989F35827F6360100C31F9A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 1989F35727F6360100C31F9A /* FirebaseFirestore */; };
+		1989F35A27F6360100C31F9A /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 1989F35927F6360100C31F9A /* FirebaseFirestoreCombine-Community */; };
+		1989F35C27F6360100C31F9A /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 1989F35B27F6360100C31F9A /* FirebaseFirestoreSwift-Beta */; };
+		1989F35E27F6369300C31F9A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989F35D27F6369300C31F9A /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +146,8 @@
 		197E34C227F3258C0023D763 /* FoodDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailRouter.swift; sourceTree = "<group>"; };
 		197E34C427F327EF0023D763 /* FoodsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsDetail.swift; sourceTree = "<group>"; };
 		197E34C627F328FD0023D763 /* FoodDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailResponse.swift; sourceTree = "<group>"; };
+		1989F35027F6340100C31F9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1989F35D27F6369300C31F9A /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +156,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				197E34B327F2F9730023D763 /* Kingfisher in Frameworks */,
+				1989F35427F6360100C31F9A /* FirebaseAuth in Frameworks */,
+				1989F35C27F6360100C31F9A /* FirebaseFirestoreSwift-Beta in Frameworks */,
 				19211D9827F2472700722CBA /* Alamofire in Frameworks */,
+				1989F35A27F6360100C31F9A /* FirebaseFirestoreCombine-Community in Frameworks */,
+				1989F35827F6360100C31F9A /* FirebaseFirestore in Frameworks */,
+				1989F35627F6360100C31F9A /* FirebaseAuthCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +252,7 @@
 				19211D9927F24C3500722CBA /* FoodsResponse.swift */,
 				197E34C427F327EF0023D763 /* FoodsDetail.swift */,
 				197E34C627F328FD0023D763 /* FoodDetailResponse.swift */,
+				1989F35D27F6369300C31F9A /* Person.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -326,6 +341,7 @@
 		1969F3FF27F0729B002CB376 /* Foody */ = {
 			isa = PBXGroup;
 			children = (
+				1989F35F27F638E500C31F9A /* register-module */,
 				1966CA4B27F44314001E1568 /* cart-module */,
 				197E34B627F31BE70023D763 /* foodDetail-module */,
 				19211D8127F1E9C000722CBA /* homepage-module */,
@@ -340,6 +356,7 @@
 				1969F40927F072A0002CB376 /* Assets.xcassets */,
 				1969F40B27F072A0002CB376 /* LaunchScreen.storyboard */,
 				1969F40E27F072A0002CB376 /* Info.plist */,
+				1989F35027F6340100C31F9A /* GoogleService-Info.plist */,
 			);
 			path = Foody;
 			sourceTree = "<group>";
@@ -439,6 +456,13 @@
 			path = router;
 			sourceTree = "<group>";
 		};
+		1989F35F27F638E500C31F9A /* register-module */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "register-module";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -458,6 +482,11 @@
 			packageProductDependencies = (
 				19211D9727F2472700722CBA /* Alamofire */,
 				197E34B227F2F9730023D763 /* Kingfisher */,
+				1989F35327F6360100C31F9A /* FirebaseAuth */,
+				1989F35527F6360100C31F9A /* FirebaseAuthCombine-Community */,
+				1989F35727F6360100C31F9A /* FirebaseFirestore */,
+				1989F35927F6360100C31F9A /* FirebaseFirestoreCombine-Community */,
+				1989F35B27F6360100C31F9A /* FirebaseFirestoreSwift-Beta */,
 			);
 			productName = Foody;
 			productReference = 1969F3FD27F0729B002CB376 /* Foody.app */;
@@ -534,6 +563,7 @@
 			packageReferences = (
 				19211D9627F2472700722CBA /* XCRemoteSwiftPackageReference "Alamofire" */,
 				197E34B127F2F9730023D763 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				1989F35227F6360100C31F9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 1969F3FE27F0729B002CB376 /* Products */;
 			projectDirPath = "";
@@ -570,6 +600,7 @@
 				1969F44B27F0B4B5002CB376 /* Poppins-Italic.ttf in Resources */,
 				1969F44727F0B4B5002CB376 /* Poppins-MediumItalic.ttf in Resources */,
 				1969F45627F0B4B5002CB376 /* Poppins-ExtraLight.ttf in Resources */,
+				1989F35127F6340200C31F9A /* GoogleService-Info.plist in Resources */,
 				1969F45427F0B4B5002CB376 /* Poppins-ThinItalic.ttf in Resources */,
 				1969F40827F0729B002CB376 /* Main.storyboard in Resources */,
 				1969F44A27F0B4B5002CB376 /* Poppins-Thin.ttf in Resources */,
@@ -606,6 +637,7 @@
 				197E34C327F3258C0023D763 /* FoodDetailRouter.swift in Sources */,
 				19211D8C27F1EE7A00722CBA /* HomeInteractor.swift in Sources */,
 				197E34C527F327EF0023D763 /* FoodsDetail.swift in Sources */,
+				1989F35E27F6369300C31F9A /* Person.swift in Sources */,
 				1969F45E27F0EA93002CB376 /* CustomTabBarController.swift in Sources */,
 				1966CA5527F443A6001E1568 /* CartInteractor.swift in Sources */,
 				1969F40327F0729B002CB376 /* SceneDelegate.swift in Sources */,
@@ -990,6 +1022,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		1989F35227F6360100C31F9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1002,6 +1042,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 197E34B127F2F9730023D763 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		1989F35327F6360100C31F9A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1989F35227F6360100C31F9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		1989F35527F6360100C31F9A /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1989F35227F6360100C31F9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		1989F35727F6360100C31F9A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1989F35227F6360100C31F9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		1989F35927F6360100C31F9A /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1989F35227F6360100C31F9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		1989F35B27F6360100C31F9A /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1989F35227F6360100C31F9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
