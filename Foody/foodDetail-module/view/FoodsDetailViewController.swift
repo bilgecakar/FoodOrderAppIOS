@@ -39,6 +39,7 @@ class FoodsDetailViewController: UIViewController {
                     self.foodImageview.kf.setImage(with : url)
                 }
             }
+            
                         
         }
         
@@ -74,6 +75,8 @@ class FoodsDetailViewController: UIViewController {
 
                       
                       self.present(alert, animated: true)
+            
+            tabBarController?.tabBar.items![2].badgeValue = "\(count)"
             
         }
     }

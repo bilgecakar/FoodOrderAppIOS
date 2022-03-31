@@ -17,6 +17,8 @@ class CartTableViewCell: UITableViewCell {
     @IBOutlet weak var minusButton: UIButton!
     @IBOutlet weak var plusButton: UIButton!
     
+    var count : Int  = 0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

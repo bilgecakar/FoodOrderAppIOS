@@ -348,7 +348,7 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvc-zi-tBe">
                                                                     <rect key="frame" x="0.0" y="33.5" width="134" height="28"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
-                                                                    <color key="textColor" name="DarkOrange"/>
+                                                                    <color key="textColor" name="SecondyColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -480,7 +480,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$87.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HAF-aH-kjl">
                                                 <rect key="frame" x="0.0" y="27" width="90.5" height="29.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="21"/>
-                                                <color key="textColor" name="DarkOrange"/>
+                                                <color key="textColor" name="SecondyColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -556,7 +556,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G5k-er-0eC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="homekit" catalog="system" id="W1E-zs-Wkl">
-                        <color key="badgeColor" name="OrangeColor"/>
+                        <color key="badgeColor" name="SecondyColor"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="r20-Cb-yqt">
@@ -682,7 +682,7 @@
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kc0-pt-efs">
                                                                             <rect key="frame" x="0.0" y="44" width="124.5" height="18"/>
                                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                                                            <color key="textColor" name="DarkOrange"/>
+                                                                            <color key="textColor" name="SecondyColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
@@ -705,7 +705,7 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6o-Nq-fC5">
                                                                     <rect key="frame" x="40.5" y="0.0" width="6" height="31"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
-                                                                    <color key="textColor" name="DarkOrange"/>
+                                                                    <color key="textColor" name="SecondyColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0F-p6-2L4">
@@ -869,8 +869,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="PrimaryColor"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" name="DarkOrange"/>
+                        <color key="barTintColor" name="SecondyColor"/>
+                        <color key="selectedImageTintColor" name="SecondyColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="G5k-er-0eC" kind="relationship" relationship="viewControllers" id="sFZ-Nf-R6n"/>
@@ -896,9 +896,6 @@
         <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="DarkOrange">
             <color red="0.89399999380111694" green="0.55299997329711914" blue="0.44699999690055847" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="OrangeColor">
-            <color red="0.99199998378753662" green="0.72500002384185791" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="PrimaryColor">
             <color red="0.067000001668930054" green="0.10199999809265137" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
