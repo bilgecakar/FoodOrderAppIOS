@@ -13,6 +13,7 @@ class HomePageViewController: UIViewController {
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var foodCollectionView: UICollectionView!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var categoryList = [Categories]()
     var foodList = [Foods]()
     
@@ -26,6 +27,10 @@ class HomePageViewController: UIViewController {
         
         foodCollectionView.delegate = self
         foodCollectionView.dataSource = self
+        
+        activityIndicator.startAnimating()
+      
+
         
         let pizza = Categories(image: "Pizza")
         let iceCream = Categories(image: "IceCream")
@@ -52,11 +57,11 @@ class HomePageViewController: UIViewController {
         //Category collectionview tasarim
         let foodTasarim = UICollectionViewFlowLayout()
         foodTasarim.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        foodTasarim.minimumLineSpacing = 15 //Dikey
+        foodTasarim.minimumLineSpacing = 10 //Dikey
         foodTasarim.minimumInteritemSpacing = 10
         
         let width = foodCollectionView.frame.size.width
-        let cellWidht = (width-30) / 2
+        let cellWidht = (width - 30) / 2
         foodTasarim.itemSize = CGSize(width: cellWidht, height: cellWidht*1.1)
         foodCollectionView.collectionViewLayout = foodTasarim
         
@@ -89,7 +94,10 @@ extension HomePageViewController : PresenterToViewHomePageProtocol
         
         self.foodList = foods
         DispatchQueue.main.async {
+            
+           
             self.foodCollectionView.reloadData()
+            self.activityIndicator.stopAnimating() //For Start Activity Indicator
         }
         
         
@@ -157,6 +165,7 @@ extension HomePageViewController : UICollectionViewDelegate, UICollectionViewDat
             
             return cell
         }
+ 
         
         
     }

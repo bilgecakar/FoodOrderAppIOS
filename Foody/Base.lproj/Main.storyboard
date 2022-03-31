@@ -317,6 +317,11 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
+                                <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" id="4XP-WD-IQv">
+                                    <rect key="frame" x="0.0" y="0.0" width="350" height="500"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="color" name="SecondyColor"/>
+                                </activityIndicatorView>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="foodCell" id="aey-kZ-gxW" customClass="FoodsCollectionViewCell" customModule="Foody" customModuleProvider="target">
                                         <rect key="frame" x="88" y="0.0" width="174" height="161"/>
@@ -375,17 +380,20 @@
                             <constraint firstItem="d9c-eE-4kg" firstAttribute="trailing" secondItem="Q08-9p-wyY" secondAttribute="trailing" constant="32" id="0Mp-Xb-Kfd"/>
                             <constraint firstItem="Q08-9p-wyY" firstAttribute="top" secondItem="8Hg-qK-bRs" secondAttribute="bottom" constant="10" id="3CP-CN-lL8"/>
                             <constraint firstItem="8Hg-qK-bRs" firstAttribute="leading" secondItem="d9c-eE-4kg" secondAttribute="leading" constant="32" id="5BP-yp-FKX"/>
+                            <constraint firstItem="d9c-eE-4kg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8Hg-qK-bRs" secondAttribute="trailing" symbolic="YES" id="9ju-DC-D1w"/>
                             <constraint firstItem="0ZM-Ai-KS6" firstAttribute="top" secondItem="d9c-eE-4kg" secondAttribute="top" constant="40" id="Fj9-nf-bfH"/>
                             <constraint firstItem="0ZM-Ai-KS6" firstAttribute="left" secondItem="d9c-eE-4kg" secondAttribute="left" constant="32" id="Mto-dV-j1s"/>
                             <constraint firstItem="d9c-eE-4kg" firstAttribute="trailing" secondItem="UPz-9e-Lts" secondAttribute="trailing" constant="32" id="QRW-Wq-kGA"/>
                             <constraint firstItem="8Hg-qK-bRs" firstAttribute="top" secondItem="gOt-QK-23c" secondAttribute="topMargin" constant="71" id="T3D-Pw-mK6"/>
                             <constraint firstItem="Q08-9p-wyY" firstAttribute="leading" secondItem="d9c-eE-4kg" secondAttribute="leading" constant="32" id="gtx-aS-2OW"/>
+                            <constraint firstItem="d9c-eE-4kg" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0ZM-Ai-KS6" secondAttribute="trailing" symbolic="YES" id="hf4-N8-Gor"/>
                             <constraint firstItem="UPz-9e-Lts" firstAttribute="leading" secondItem="d9c-eE-4kg" secondAttribute="leading" constant="32" id="o4t-Vw-bmz"/>
                             <constraint firstItem="UPz-9e-Lts" firstAttribute="top" secondItem="Q08-9p-wyY" secondAttribute="bottom" constant="10" id="vh5-zI-6TL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sYT-1a-J4M"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="4XP-WD-IQv" id="MRe-nY-Rwb"/>
                         <outlet property="categoryCollectionView" destination="Q08-9p-wyY" id="fEf-Ps-0bn"/>
                         <outlet property="foodCollectionView" destination="UPz-9e-Lts" id="4uG-wg-lkz"/>
                         <segue destination="aF5-gS-TeX" kind="presentation" identifier="toFoodDetail" id="Xxj-lT-Kth"/>
@@ -760,9 +768,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npY-kQ-hsg">
-                                <rect key="frame" x="359" y="45" width="44" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npY-kQ-hsg">
+                                <rect key="frame" x="338" y="54" width="44" height="31"/>
                                 <color key="tintColor" name="PrimaryColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="trash" catalog="system"/>
@@ -771,7 +778,10 @@
                         <viewLayoutGuide key="safeArea" id="1S8-cP-uMa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="npY-kQ-hsg" firstAttribute="top" secondItem="1S8-cP-uMa" secondAttribute="top" constant="10" id="1i6-yh-LEx"/>
                             <constraint firstItem="nuU-cr-lzK" firstAttribute="trailing" secondItem="1S8-cP-uMa" secondAttribute="trailing" id="FCF-JV-qK0"/>
+                            <constraint firstItem="1S8-cP-uMa" firstAttribute="trailing" secondItem="npY-kQ-hsg" secondAttribute="trailing" constant="32" id="PD2-G5-fy6"/>
+                            <constraint firstItem="npY-kQ-hsg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1S8-cP-uMa" secondAttribute="leading" symbolic="YES" id="aKB-Yf-wIa"/>
                             <constraint firstItem="BWa-6f-pE8" firstAttribute="leading" secondItem="1S8-cP-uMa" secondAttribute="leading" constant="32" id="aOE-hZ-itC"/>
                             <constraint firstItem="BWa-6f-pE8" firstAttribute="top" secondItem="nuU-cr-lzK" secondAttribute="bottom" constant="130" id="eec-CV-FLi"/>
                             <constraint firstItem="nuU-cr-lzK" firstAttribute="leading" secondItem="1S8-cP-uMa" secondAttribute="leading" id="fSU-tQ-Q0b"/>
