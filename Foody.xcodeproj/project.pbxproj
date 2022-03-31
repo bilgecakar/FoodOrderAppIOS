@@ -69,6 +69,10 @@
 		1989F35A27F6360100C31F9A /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 1989F35927F6360100C31F9A /* FirebaseFirestoreCombine-Community */; };
 		1989F35C27F6360100C31F9A /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 1989F35B27F6360100C31F9A /* FirebaseFirestoreSwift-Beta */; };
 		1989F35E27F6369300C31F9A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989F35D27F6369300C31F9A /* Person.swift */; };
+		1989F36627F63B7F00C31F9A /* RegisterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989F36527F63B7F00C31F9A /* RegisterProtocols.swift */; };
+		1989F36827F63B9900C31F9A /* RegisterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989F36727F63B9900C31F9A /* RegisterInteractor.swift */; };
+		1989F36A27F63BA800C31F9A /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989F36927F63BA800C31F9A /* RegisterPresenter.swift */; };
+		1989F36C27F63BBD00C31F9A /* RegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1989F36B27F63BBD00C31F9A /* RegisterRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +152,10 @@
 		197E34C627F328FD0023D763 /* FoodDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailResponse.swift; sourceTree = "<group>"; };
 		1989F35027F6340100C31F9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1989F35D27F6369300C31F9A /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		1989F36527F63B7F00C31F9A /* RegisterProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProtocols.swift; sourceTree = "<group>"; };
+		1989F36727F63B9900C31F9A /* RegisterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterInteractor.swift; sourceTree = "<group>"; };
+		1989F36927F63BA800C31F9A /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		1989F36B27F63BBD00C31F9A /* RegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RegisterRouter.swift; path = "Foody/register-module/presenter/RegisterRouter.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +349,7 @@
 		1969F3FF27F0729B002CB376 /* Foody */ = {
 			isa = PBXGroup;
 			children = (
+				1989F36D27F63BC600C31F9A /* login-module */,
 				1989F35F27F638E500C31F9A /* register-module */,
 				1966CA4B27F44314001E1568 /* cart-module */,
 				197E34B627F31BE70023D763 /* foodDetail-module */,
@@ -349,10 +358,8 @@
 				1969F43027F0B0BF002CB376 /* Fonts */,
 				1969F40027F0729B002CB376 /* AppDelegate.swift */,
 				1969F40227F0729B002CB376 /* SceneDelegate.swift */,
-				1969F40427F0729B002CB376 /* LoginViewController.swift */,
 				1969F40627F0729B002CB376 /* Main.storyboard */,
 				1969F45D27F0EA93002CB376 /* CustomTabBarController.swift */,
-				1969F45927F0C8A1002CB376 /* RegisterViewController.swift */,
 				1969F40927F072A0002CB376 /* Assets.xcassets */,
 				1969F40B27F072A0002CB376 /* LaunchScreen.storyboard */,
 				1969F40E27F072A0002CB376 /* Info.plist */,
@@ -471,6 +478,7 @@
 		1989F36027F6392100C31F9A /* protocols */ = {
 			isa = PBXGroup;
 			children = (
+				1989F36527F63B7F00C31F9A /* RegisterProtocols.swift */,
 			);
 			path = protocols;
 			sourceTree = "<group>";
@@ -478,6 +486,7 @@
 		1989F36127F6392900C31F9A /* interactor */ = {
 			isa = PBXGroup;
 			children = (
+				1989F36727F63B9900C31F9A /* RegisterInteractor.swift */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -485,6 +494,7 @@
 		1989F36227F6393400C31F9A /* presenter */ = {
 			isa = PBXGroup;
 			children = (
+				1989F36927F63BA800C31F9A /* RegisterPresenter.swift */,
 			);
 			path = presenter;
 			sourceTree = "<group>";
@@ -492,6 +502,7 @@
 		1989F36327F6393C00C31F9A /* router */ = {
 			isa = PBXGroup;
 			children = (
+				1989F36B27F63BBD00C31F9A /* RegisterRouter.swift */,
 			);
 			path = router;
 			sourceTree = "<group>";
@@ -499,6 +510,55 @@
 		1989F36427F6394600C31F9A /* view */ = {
 			isa = PBXGroup;
 			children = (
+				1969F45927F0C8A1002CB376 /* RegisterViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		1989F36D27F63BC600C31F9A /* login-module */ = {
+			isa = PBXGroup;
+			children = (
+				1989F37227F63C3000C31F9A /* view */,
+				1989F37127F63C0400C31F9A /* router */,
+				1989F37027F63BFD00C31F9A /* presenter */,
+				1989F36F27F63BF100C31F9A /* interactor */,
+				1989F36E27F63BE600C31F9A /* protocols */,
+			);
+			path = "login-module";
+			sourceTree = "<group>";
+		};
+		1989F36E27F63BE600C31F9A /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		1989F36F27F63BF100C31F9A /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		1989F37027F63BFD00C31F9A /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		1989F37127F63C0400C31F9A /* router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		1989F37227F63C3000C31F9A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				1969F40427F0729B002CB376 /* LoginViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -668,9 +728,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1989F36627F63B7F00C31F9A /* RegisterProtocols.swift in Sources */,
 				1969F40527F0729B002CB376 /* LoginViewController.swift in Sources */,
 				1969F46227F0F2AD002CB376 /* Categories.swift in Sources */,
 				19211D9A27F24C3500722CBA /* FoodsResponse.swift in Sources */,
+				1989F36827F63B9900C31F9A /* RegisterInteractor.swift in Sources */,
 				197E34BF27F324740023D763 /* FoodDetailInteractor.swift in Sources */,
 				1966CA5327F44398001E1568 /* CartProtocols.swift in Sources */,
 				1969F40127F0729B002CB376 /* AppDelegate.swift in Sources */,
@@ -681,6 +743,7 @@
 				1969F45E27F0EA93002CB376 /* CustomTabBarController.swift in Sources */,
 				1966CA5527F443A6001E1568 /* CartInteractor.swift in Sources */,
 				1969F40327F0729B002CB376 /* SceneDelegate.swift in Sources */,
+				1989F36A27F63BA800C31F9A /* RegisterPresenter.swift in Sources */,
 				197E34B527F2FFCD0023D763 /* FoodsDetailViewController.swift in Sources */,
 				19211D8027F1D2D600722CBA /* Foods.swift in Sources */,
 				1969F45C27F0DA26002CB376 /* HomePageViewController.swift in Sources */,
@@ -691,6 +754,7 @@
 				197E34BD27F31DD70023D763 /* FoodDetailProtocols.swift in Sources */,
 				19211D9027F1EEF100722CBA /* HomeRouter.swift in Sources */,
 				1966CA5727F443B3001E1568 /* CartPresenter.swift in Sources */,
+				1989F36C27F63BBD00C31F9A /* RegisterRouter.swift in Sources */,
 				19211D8E27F1EEBD00722CBA /* HomePresenter.swift in Sources */,
 				197E34C727F328FD0023D763 /* FoodDetailResponse.swift in Sources */,
 				1969F46027F0F123002CB376 /* CategoryCollectionViewCell.swift in Sources */,
