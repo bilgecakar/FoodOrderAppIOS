@@ -95,7 +95,7 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="La7-SZ-JId">
                                                 <rect key="frame" x="207.5" y="0.0" width="142.5" height="68"/>
-                                                <color key="tintColor" name="DarkOrange"/>
+                                                <color key="tintColor" name="SecondyColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="SIGN UP">
                                                     <fontDescription key="titleFontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
@@ -131,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="763.768115942029" y="30.803571428571427"/>
+            <point key="canvasLocation" x="3225" y="-991"/>
         </scene>
         <!--Register-->
         <scene sceneID="wuN-7E-nz5">
@@ -150,7 +150,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ID0-ph-oza" userLabel="Sign In Stack View">
                                 <rect key="frame" x="32" y="270" width="350" height="552"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yu-kY-iWE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yu-kY-iWE">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="56"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="35"/>
                                         <color key="textColor" name="PrimaryColor"/>
@@ -197,7 +197,7 @@
                                         <color key="backgroundColor" name="PrimaryColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="SIGN IN">
+                                        <buttonConfiguration key="configuration" style="plain" title="SIGN UP">
                                             <fontDescription key="titleFontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -215,7 +215,7 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKf-z9-PZ4">
                                                 <rect key="frame" x="230.5" y="0.0" width="119.5" height="66"/>
-                                                <color key="tintColor" name="DarkOrange"/>
+                                                <color key="tintColor" name="SecondyColor"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="LOGIN">
                                                     <fontDescription key="titleFontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
@@ -238,7 +238,9 @@
                             <constraint firstItem="tFx-EL-UdE" firstAttribute="trailing" secondItem="ID0-ph-oza" secondAttribute="trailing" constant="32" id="wSt-un-DdU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="LZB-LC-6vX"/>
+                    <navigationItem key="navigationItem" id="LZB-LC-6vX">
+                        <barButtonItem key="backBarButtonItem" title="           " id="eF4-r1-cWn"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailTextfield" destination="jE4-0y-Zsw" id="K44-og-zdp"/>
                         <outlet property="passwordTextfield" destination="bT8-FR-iEu" id="tgB-tR-SKO"/>
@@ -248,7 +250,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PGU-fd-Tco" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1534.7826086956522" y="30.803571428571427"/>
+            <point key="canvasLocation" x="4235" y="-1873"/>
         </scene>
         <!--Home Page View Controller-->
         <scene sceneID="iOd-Mp-ft8">
@@ -535,10 +537,10 @@
             </objects>
             <point key="canvasLocation" x="3631.884057971015" y="862.5"/>
         </scene>
-        <!--Navigation Controller-->
+        <!-- -->
         <scene sceneID="YpS-vQ-3uG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="efi-IZ-Nbe" sceneMemberID="viewController">
+                <navigationController title=" " automaticallyAdjustsScrollViewInsets="NO" id="efi-IZ-Nbe" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="23b-cZ-5ZT">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -555,7 +557,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="np2-BA-JO8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-238" y="74"/>
+            <point key="canvasLocation" x="2396" y="-991"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sDs-wW-Rkx">
