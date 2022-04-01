@@ -83,6 +83,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="LOGIN">
                                             <fontDescription key="titleFontDescription" name="Poppins-Regular" family="Poppins" pointSize="20"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mBf-mZ-9s8"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8k4-OC-73E">
                                         <rect key="frame" x="0.0" y="383.5" width="350" height="68.5"/>
@@ -123,9 +126,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="lfu-6d-W6x"/>
                     <connections>
+                        <outlet property="emailTextfield" destination="tdy-oo-AxK" id="r6q-0x-agA"/>
                         <outlet property="loginButton" destination="T62-fe-zr2" id="5fn-D0-I91"/>
                         <outlet property="passwordTextfield" destination="XsG-pf-4aL" id="x4o-cc-pvv"/>
-                        <outlet property="usernameTextfield" destination="tdy-oo-AxK" id="r6q-0x-agA"/>
                         <segue destination="FJb-AE-9E5" kind="show" identifier="toSignIn" id="UVh-sr-lyW"/>
                     </connections>
                 </viewController>
