@@ -68,10 +68,13 @@ class ViewController: UIViewController {
             {
                 print("start login success: " + (user?.email)! )
                 
+                
             }else
             {
                 print("No user is signed in.")
             }
+            
+            
             
         }
         
