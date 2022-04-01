@@ -15,7 +15,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = ""
+        
+            }
     
     func updateUI()
     {
@@ -31,6 +37,8 @@ class ViewController: UIViewController {
         
         //Login Button UI
         loginButton.layer.cornerRadius = 5
+        
+      
         
     }
 

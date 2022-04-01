@@ -22,6 +22,11 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // remove left buttons (in case you added some)
+         self.navigationItem.leftBarButtonItems = []
+        // hide the default back buttons
+         self.navigationItem.hidesBackButton = true
+
         updateUI()
         
         RegisterRouter.createModule(ref: self)
@@ -48,6 +53,7 @@ class RegisterViewController: UIViewController {
         passwordTextfield.layer.cornerRadius = 5
         
         signInButton.layer.cornerRadius = 5
+        
     }
     
     
@@ -70,6 +76,11 @@ class RegisterViewController: UIViewController {
         alert.addAction(okayAction)
         self.present(alert, animated: true)
         
+    }
+    
+    
+    @IBAction func returnLogin(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
 }

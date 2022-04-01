@@ -220,6 +220,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="LOGIN">
                                                     <fontDescription key="titleFontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="returnLogin:" destination="FJb-AE-9E5" eventType="touchUpInside" id="cny-4Z-XgM"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -238,9 +241,7 @@
                             <constraint firstItem="tFx-EL-UdE" firstAttribute="trailing" secondItem="ID0-ph-oza" secondAttribute="trailing" constant="32" id="wSt-un-DdU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="LZB-LC-6vX">
-                        <barButtonItem key="backBarButtonItem" title="           " id="eF4-r1-cWn"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="LZB-LC-6vX"/>
                     <connections>
                         <outlet property="emailTextfield" destination="jE4-0y-Zsw" id="K44-og-zdp"/>
                         <outlet property="passwordTextfield" destination="bT8-FR-iEu" id="tgB-tR-SKO"/>
