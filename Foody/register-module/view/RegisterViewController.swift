@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
     
@@ -16,12 +17,18 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var signInButton: UIButton!
     
+    var registerRresneterObject : ViewToPresenterRegisterProtocol?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         updateUI()
+        
+        RegisterRouter.createModule(ref: self)
     
     }
+    
+
     
     func updateUI()
     {
@@ -43,5 +50,26 @@ class RegisterViewController: UIViewController {
         signInButton.layer.cornerRadius = 5
     }
     
+    
+    @IBAction func register(_ sender: Any) {
+        
+        if let te = emailTextfield.text, let tp = passwordTextfield.text
+        {
+            registerRresneterObject?.registerAll(email: te, password: tp)
+        }
+        
+        let alert = UIAlertController(title: "New User", message: "Welcome \(usernameTextfield.text ?? "")", preferredStyle: .alert)
+        
+        let okayAction = UIAlertAction(title: "Okay", style: .default)
+        {
+            action in
+            
+            self.navigationController?.popToRootViewController(animated: true)
+        }
+        
+        alert.addAction(okayAction)
+        self.present(alert, animated: true)
+        
+    }
     
 }
