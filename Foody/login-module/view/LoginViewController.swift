@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         updateUI()
         
         LoginRouter.createModule(ref: self)
@@ -67,7 +69,7 @@ class ViewController: UIViewController {
             if user != nil
             {
                 print("start login success: " + (user?.email)! )
-                
+                self.performSegue(withIdentifier: "toHome", sender: nil)
                 
             }else
             {

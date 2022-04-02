@@ -7,11 +7,13 @@
 
 import UIKit
 import Kingfisher
+import Firebase
 
 class HomePageViewController: UIViewController {
     
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var foodCollectionView: UICollectionView!
+    @IBOutlet weak var usernameLabel: UILabel!
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var categoryList = [Categories]()
@@ -22,6 +24,8 @@ class HomePageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        usernameLabel.text = Auth.auth().currentUser?.email
         
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
