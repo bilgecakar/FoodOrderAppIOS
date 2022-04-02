@@ -7,6 +7,7 @@
 
 import UIKit
 import Kingfisher
+import Firebase
 
 class FoodsDetailViewController: UIViewController {
     
@@ -63,7 +64,7 @@ class FoodsDetailViewController: UIViewController {
     
     @IBAction func addCart(_ sender: Any) {
         if let f = food{
-            foodDetailPresenterObject?.addAllCart(yemek_adi: f.yemek_adi!, yemek_fiyat: f.yemek_fiyat!, yemek_resim_adi: f.yemek_resim_adi!, yemek_siparis_adet: String(count), kullanici_adi: "Blg")
+            foodDetailPresenterObject?.addAllCart(yemek_adi: f.yemek_adi!, yemek_fiyat: f.yemek_fiyat!, yemek_resim_adi: f.yemek_resim_adi!, yemek_siparis_adet: String(count), kullanici_adi: "\(Auth.auth().currentUser?.email ?? "")")
             
             let alert = UIAlertController(title: "Add To Cart", message: "\(f.yemek_adi!) added to cart!", preferredStyle: .alert)
             let OKAction = UIAlertAction(title: "Okay", style: .default){ action in

@@ -66,6 +66,13 @@ class ViewController: UIViewController {
                 
             }else
             {
+                let alert = UIAlertController(title: "Error", message: "Invalid email or password", preferredStyle: .alert)
+                let OKAction = UIAlertAction(title: "Okay", style: .default){ action in
+                    self.navigationController?.popToRootViewController(animated: true)
+                }
+                alert.addAction(OKAction)
+                
+                self.present(alert, animated: true)
                 print("No user is signed in.")
             }
             
