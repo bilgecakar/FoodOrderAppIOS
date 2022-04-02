@@ -31,7 +31,7 @@ class HomePageViewController: UIViewController {
         
         //Food collectionview UI
         let foodTasarim = UICollectionViewFlowLayout()
-        foodTasarim.sectionInset = UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 5)
+        foodTasarim.sectionInset = UIEdgeInsets(top: 8, left: 3, bottom: 8, right: 3)
         foodTasarim.minimumLineSpacing = 20
         foodTasarim.minimumInteritemSpacing = 10
         let width = foodCollectionView.frame.size.width
@@ -44,6 +44,8 @@ class HomePageViewController: UIViewController {
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        
+        self.navigationItem.title = ""
         homepagePresenterOnject?.showFoods()
         homepagePresenterOnject?.showFoodCount()
         

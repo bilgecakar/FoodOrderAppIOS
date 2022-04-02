@@ -13,7 +13,6 @@ protocol ViewToPresenterProfileProtocol
     var profileView : PresenterToViewProfileProtocol? {get set}
     
     func showInfoAll()
-    func updateInfoAll(email : String, password : String)
 }
 
 protocol PresenterToInteractorProfileProtocol
@@ -21,7 +20,6 @@ protocol PresenterToInteractorProfileProtocol
     var profilePresenter : InteractorToPresenterProfileProtocol? {get set}
     
     func showInfo()
-    func updateInfo(email : String, password : String)
 }
 
 protocol InteractorToPresenterProfileProtocol

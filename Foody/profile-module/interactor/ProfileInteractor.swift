@@ -20,8 +20,4 @@ class ProfileInteractor : PresenterToInteractorProfileProtocol
         profilePresenter?.sendDataToPresenter(email: email)
     }
     
-    func updateInfo(email: String, password: String) {
-        print("Soon...")
-    }
-        
 }

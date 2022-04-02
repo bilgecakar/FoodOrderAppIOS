@@ -17,10 +17,6 @@ class ProfilePresenter : ViewToPresenterProfileProtocol
         profileInteractor?.showInfo()
     }
     
-    func updateInfoAll(email: String, password: String) {
-        profileInteractor?.updateInfo(email: email, password: password)
-    }
-    
     
 }
 
