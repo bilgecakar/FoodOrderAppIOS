@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CartViewController: UIViewController {
     
@@ -17,6 +18,7 @@ class CartViewController: UIViewController {
     var cartPresenterObject : ViewToPresenterCartProtocol?
     
     var foodsCount = 0
+    var total = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,25 +38,29 @@ class CartViewController: UIViewController {
         
     }
     
+    @IBAction func deleteCart(_ sender: Any) {
+        
+                
+    }
 }
 
 extension CartViewController : PresenterToViewCartProtocol
 {
     func sendDataToView(cartList: Array<FoodsDetail>) {
         self.cartFoods = cartList
-        var total = 0
+        
         
         DispatchQueue.main.async {
             
             self.cartFoods.forEach{   cart_food in
                 
-                total = total  + (Int(cart_food.yemek_fiyat!)! * Int(cart_food.yemek_siparis_adet!)!)
+                self.total = self.total  + (Int(cart_food.yemek_fiyat!)! * Int(cart_food.yemek_siparis_adet!)!)
                 
             }
             
             self.tabBarController?.tabBar.items![1].badgeValue = "\(self.cartFoods.count)"
             
-            self.foodTotalPrice.text = "₺\(total)"
+            self.foodTotalPrice.text = "₺\(self.total)"
             self.cartTableview.reloadData()
             
         }
@@ -99,14 +105,16 @@ extension CartViewController : UITableViewDelegate, UITableViewDataSource
             alert.addAction(cancelAction)
             
             let yesAction = UIAlertAction(title: "Yes", style: .destructive){ action in
-                self.cartPresenterObject?.deleteAllCart(sepet_yemek_id: cart.sepet_yemek_id!, kullanici_adi: "Blg")
+                self.cartPresenterObject?.deleteAllCart(sepet_yemek_id: cart.sepet_yemek_id!, kullanici_adi: "\(Auth.auth().currentUser?.email ?? "")")
+                self.cartFoods.removeAll()
             }
             alert.addAction(yesAction)
             
             self.present(alert, animated: true)
+            
         }
-        deleteAction.backgroundColor = UIColor(named: "ButtonColor")
-        deleteAction.image = UIImage(named: "Delete.png")
+        deleteAction.backgroundColor = UIColor(named: "SecondyColor")
+        deleteAction.image = UIImage(named: "trash.png")
         
         
         return UISwipeActionsConfiguration(actions: [deleteAction])

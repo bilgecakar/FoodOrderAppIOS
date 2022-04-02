@@ -458,8 +458,8 @@
             filePath = "Foody/cart-module/view/CartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "payment(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -474,10 +474,10 @@
             filePath = "Foody/cart-module/view/CartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "CartViewController"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -490,9 +490,9 @@
             filePath = "Foody/cart-module/view/CartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -506,9 +506,9 @@
             filePath = "Foody/cart-module/view/CartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -522,9 +522,9 @@
             filePath = "Foody/cart-module/view/CartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
