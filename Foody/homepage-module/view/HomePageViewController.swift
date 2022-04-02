@@ -25,6 +25,7 @@ class HomePageViewController: UIViewController {
         super.viewDidLoad()
         
         usernameLabel.text = Auth.auth().currentUser?.email
+        print(Auth.auth().currentUser?.email)
         
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self

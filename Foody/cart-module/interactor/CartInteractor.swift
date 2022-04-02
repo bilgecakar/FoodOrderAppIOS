@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import Firebase
 
 class CartInteractor : PresenterToInteractorCartProtocol
 {
@@ -14,7 +15,7 @@ class CartInteractor : PresenterToInteractorCartProtocol
     
     func showCart() {
         
-        let param : Parameters = ["kullanici_adi" : "Blg"]
+        let param : Parameters = ["kullanici_adi" : "\(Auth.auth().currentUser?.email ?? "")"]
         
         AF.request("http://kasimadalan.pe.hu/yemekler/sepettekiYemekleriGetir.php", method: .post, parameters: param).responseJSON{ response in
             if let data = response.data
@@ -41,7 +42,7 @@ class CartInteractor : PresenterToInteractorCartProtocol
     
     func deleteCart(sepet_yemek_id: String, kullanici_adi: String) {
         
-        let param : Parameters = ["sepet_yemek_id" : sepet_yemek_id, "kullanici_adi" : "Blg"]
+        let param : Parameters = ["sepet_yemek_id" : sepet_yemek_id, "kullanici_adi" : Auth.auth().currentUser?.email ?? ""]
         
         AF.request("http://kasimadalan.pe.hu/yemekler/sepettenYemekSil.php", method: .post, parameters: param).response{ response in
             if let data = response.data {

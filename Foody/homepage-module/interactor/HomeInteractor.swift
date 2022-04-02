@@ -7,7 +7,7 @@
 
 import Foundation
 import Alamofire
-
+import Firebase
 
 class HomeInteractor : PresenterToInteractorHomaPageProtocol
 {
@@ -38,7 +38,7 @@ class HomeInteractor : PresenterToInteractorHomaPageProtocol
     
     func showFoodCount() {
         
-        let param : Parameters = ["kullanici_adi" : "Blg"]
+        let param : Parameters = ["kullanici_adi" : "\(Auth.auth().currentUser?.email ?? "")"]
         
         AF.request("http://kasimadalan.pe.hu/yemekler/sepettekiYemekleriGetir.php", method: .post, parameters: param).responseJSON{ response in
             if let data = response.data
