@@ -7,7 +7,7 @@
 		<key>Foody.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<key>Promises (Playground) 1.xcscheme</key>
 		<dict>
@@ -29,6 +29,24 @@
 			<false/>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1969F3FC27F0729B002CB376</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1969F41227F072A0002CB376</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1969F41C27F072A1002CB376</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

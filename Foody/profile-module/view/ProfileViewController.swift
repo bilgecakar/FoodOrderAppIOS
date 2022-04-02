@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Firebase
 class ProfileViewController: UIViewController {
     
     
@@ -88,25 +88,32 @@ extension ProfileViewController : UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
-        
-        let alert = UIAlertController(title: "Language", message: "", preferredStyle: .actionSheet)
-        
-        let turkce = UIAlertAction(title: "Türkçe", style: .default) { action in
-            print("Türkçe")
+        if indexPath.row == 0
+        {
+            let alert = UIAlertController(title: "Language", message: "", preferredStyle: .actionSheet)
+            
+            let turkce = UIAlertAction(title: "Türkçe", style: .default) { action in
+                print("Türkçe")
+            }
+            
+            let english = UIAlertAction(title: "English", style: .default) { action in
+              print("English")
+            }
+            
+            alert.addAction(turkce)
+            alert.addAction(english)
+            
+            present(alert, animated: true, completion: nil)
         }
-        
-        let english = UIAlertAction(title: "English", style: .default) { action in
-          print("English")
+        else
+        {
+            do { try Auth.auth().signOut() }
+                catch { print("already logged out") }
+                
+               performSegue(withIdentifier: "toLogin", sender: nil)
+           
         }
-        
-        alert.addAction(turkce)
-        alert.addAction(english)
-        
-        present(alert, animated: true, completion: nil)
-        
-        
-        
+      
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -115,4 +122,6 @@ extension ProfileViewController : UITableViewDelegate, UITableViewDataSource
     
     
 }
+
+
 
