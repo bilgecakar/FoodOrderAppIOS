@@ -9,12 +9,9 @@ import UIKit
 import Firebase
 class ProfileViewController: UIViewController {
     
-    @IBOutlet weak var updateButton: UIButton!
     @IBOutlet weak var settingTableview: UITableView!
-    @IBOutlet weak var activeSwitch: UISwitch!
     @IBOutlet weak var field: UIView!
-    @IBOutlet weak var passwordTextfield: UITextField!
-    @IBOutlet weak var emailTextfield: UITextField!
+    @IBOutlet weak var emailLabel: UILabel!
     
     var settings = [Setting]()
     
@@ -45,22 +42,10 @@ class ProfileViewController: UIViewController {
     
     func updateUI()
     {
-        //Email Textfield UI
-        emailTextfield.layer.borderColor = UIColor(named: "PrimaryColor")?.cgColor
-        emailTextfield.layer.borderWidth = 1.0
-        emailTextfield.layer.cornerRadius = 5
-        
-        //Password Textfield UI
-        passwordTextfield.layer.borderColor = UIColor(named: "PrimaryColor")?.cgColor
-        passwordTextfield.layer.borderWidth = 1.0
-        passwordTextfield.layer.cornerRadius = 5
-        
         //White view UI
         field.layer.cornerRadius = 70
         field.layer.maskedCorners = [.layerMinXMinYCorner]
         
-        //Update Button UI
-        updateButton.layer.cornerRadius = 10
     }
     
     
@@ -70,7 +55,7 @@ extension ProfileViewController : PresenterToViewProfileProtocol
 {
     func sendDataToView(email: String) {
         
-        self.emailTextfield.text = email
+        self.emailLabel.text = email
     }
     
 }

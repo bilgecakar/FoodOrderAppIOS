@@ -57,7 +57,6 @@
 		1969F45C27F0DA26002CB376 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969F45B27F0DA26002CB376 /* HomePageViewController.swift */; };
 		1969F45E27F0EA93002CB376 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969F45D27F0EA93002CB376 /* CustomTabBarController.swift */; };
 		1969F46027F0F123002CB376 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969F45F27F0F123002CB376 /* CategoryCollectionViewCell.swift */; };
-		1969F46227F0F2AD002CB376 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1969F46127F0F2AD002CB376 /* Categories.swift */; };
 		19767F0527F832F500C77390 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19767F0427F832F500C77390 /* ProfileViewController.swift */; };
 		19767F0727F8462800C77390 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19767F0627F8462800C77390 /* SettingTableViewCell.swift */; };
 		19767F0927F84F8D00C77390 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19767F0827F84F8D00C77390 /* Setting.swift */; };
@@ -156,7 +155,6 @@
 		1969F45B27F0DA26002CB376 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		1969F45D27F0EA93002CB376 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
 		1969F45F27F0F123002CB376 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
-		1969F46127F0F2AD002CB376 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		19767F0427F832F500C77390 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		19767F0627F8462800C77390 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		19767F0827F84F8D00C77390 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
@@ -275,7 +273,6 @@
 		19211D8827F1EA7800722CBA /* entity */ = {
 			isa = PBXGroup;
 			children = (
-				1969F46127F0F2AD002CB376 /* Categories.swift */,
 				19211D7F27F1D2D600722CBA /* Foods.swift */,
 				19211D9927F24C3500722CBA /* FoodsResponse.swift */,
 				197E34C427F327EF0023D763 /* FoodsDetail.swift */,
@@ -816,7 +813,6 @@
 			files = (
 				1989F36627F63B7F00C31F9A /* RegisterProtocols.swift in Sources */,
 				1969F40527F0729B002CB376 /* LoginViewController.swift in Sources */,
-				1969F46227F0F2AD002CB376 /* Categories.swift in Sources */,
 				19211D9A27F24C3500722CBA /* FoodsResponse.swift in Sources */,
 				1989F36827F63B9900C31F9A /* RegisterInteractor.swift in Sources */,
 				197E34BF27F324740023D763 /* FoodDetailInteractor.swift in Sources */,

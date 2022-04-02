@@ -52,7 +52,7 @@ extension CartViewController : PresenterToViewCartProtocol
                 
             }
             
-            self.tabBarController?.tabBar.items![2].badgeValue = "\(self.cartFoods.count)"
+            self.tabBarController?.tabBar.items![1].badgeValue = "\(self.cartFoods.count)"
             
             self.foodTotalPrice.text = "₺\(total)"
             self.cartTableview.reloadData()
