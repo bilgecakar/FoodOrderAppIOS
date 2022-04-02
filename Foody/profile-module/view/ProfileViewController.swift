@@ -19,8 +19,12 @@ class ProfileViewController: UIViewController {
     
     var settings = [Setting]()
     
+    var profilePresenterObject : ViewToPresenterProfileProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        ProfileRouter.createModule(ref: self)
         
         settingTableview.delegate = self
         settingTableview.dataSource = self
@@ -32,6 +36,10 @@ class ProfileViewController: UIViewController {
         settings.append(settingItem2)
         
         updateUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        profilePresenterObject?.showInfoAll()
     }
     
     func updateUI()
@@ -52,6 +60,18 @@ class ProfileViewController: UIViewController {
     
     
 }
+
+extension ProfileViewController : PresenterToViewProfileProtocol
+{
+    func sendDataToView(email: String) {
+        
+        self.emailTextfield.text = email
+    }
+    
+    
+}
+
+
 extension ProfileViewController : UITableViewDelegate, UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,3 +90,4 @@ extension ProfileViewController : UITableViewDelegate, UITableViewDataSource
     
     
 }
+

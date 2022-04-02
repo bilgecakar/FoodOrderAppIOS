@@ -61,6 +61,10 @@
 		19767F0527F832F500C77390 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19767F0427F832F500C77390 /* ProfileViewController.swift */; };
 		19767F0727F8462800C77390 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19767F0627F8462800C77390 /* SettingTableViewCell.swift */; };
 		19767F0927F84F8D00C77390 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19767F0827F84F8D00C77390 /* Setting.swift */; };
+		19767F1227F857B100C77390 /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19767F1127F857B100C77390 /* ProfileProtocols.swift */; };
+		19767F1427F857C700C77390 /* ProfileInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19767F1327F857C700C77390 /* ProfileInteractor.swift */; };
+		19767F1727F857E000C77390 /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19767F1627F857E000C77390 /* ProfilePresenter.swift */; };
+		19767F1927F857FA00C77390 /* ProfileRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19767F1827F857FA00C77390 /* ProfileRouter.swift */; };
 		197E34B327F2F9730023D763 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 197E34B227F2F9730023D763 /* Kingfisher */; };
 		197E34B527F2FFCD0023D763 /* FoodsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197E34B427F2FFCD0023D763 /* FoodsDetailViewController.swift */; };
 		197E34BD27F31DD70023D763 /* FoodDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197E34BC27F31DD70023D763 /* FoodDetailProtocols.swift */; };
@@ -157,6 +161,10 @@
 		19767F0427F832F500C77390 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		19767F0627F8462800C77390 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		19767F0827F84F8D00C77390 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		19767F1127F857B100C77390 /* ProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
+		19767F1327F857C700C77390 /* ProfileInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileInteractor.swift; sourceTree = "<group>"; };
+		19767F1627F857E000C77390 /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		19767F1827F857FA00C77390 /* ProfileRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileRouter.swift; sourceTree = "<group>"; };
 		197E34B427F2FFCD0023D763 /* FoodsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsDetailViewController.swift; sourceTree = "<group>"; };
 		197E34BC27F31DD70023D763 /* FoodDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailProtocols.swift; sourceTree = "<group>"; };
 		197E34BE27F324740023D763 /* FoodDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailInteractor.swift; sourceTree = "<group>"; };
@@ -364,18 +372,17 @@
 		1969F3FF27F0729B002CB376 /* Foody */ = {
 			isa = PBXGroup;
 			children = (
+				19767F0A27F854BB00C77390 /* profile-module */,
 				1989F36D27F63BC600C31F9A /* login-module */,
 				1989F35F27F638E500C31F9A /* register-module */,
 				19211D8127F1E9C000722CBA /* homepage-module */,
-				197E34B627F31BE70023D763 /* foodDetail-module */,
+				197E34B627F31BE70023D763 /* fooddetail-module */,
 				1966CA4B27F44314001E1568 /* cart-module */,
 				19211D8827F1EA7800722CBA /* entity */,
 				1969F43027F0B0BF002CB376 /* Fonts */,
 				1969F40027F0729B002CB376 /* AppDelegate.swift */,
 				1969F40227F0729B002CB376 /* SceneDelegate.swift */,
 				1969F40627F0729B002CB376 /* Main.storyboard */,
-				19767F0627F8462800C77390 /* SettingTableViewCell.swift */,
-				19767F0427F832F500C77390 /* ProfileViewController.swift */,
 				1969F45D27F0EA93002CB376 /* CustomTabBarController.swift */,
 				1969F40927F072A0002CB376 /* Assets.xcassets */,
 				1969F40B27F072A0002CB376 /* LaunchScreen.storyboard */,
@@ -428,7 +435,68 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		197E34B627F31BE70023D763 /* foodDetail-module */ = {
+		19767F0A27F854BB00C77390 /* profile-module */ = {
+			isa = PBXGroup;
+			children = (
+				19767F1027F8555100C77390 /* tableview */,
+				19767F0F27F8554500C77390 /* view */,
+				19767F0E27F8553E00C77390 /* router */,
+				19767F0D27F8553500C77390 /* presenter */,
+				19767F0C27F8552500C77390 /* interactor */,
+				19767F0B27F8551C00C77390 /* protocols */,
+			);
+			path = "profile-module";
+			sourceTree = "<group>";
+		};
+		19767F0B27F8551C00C77390 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				19767F1127F857B100C77390 /* ProfileProtocols.swift */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		19767F0C27F8552500C77390 /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				19767F1327F857C700C77390 /* ProfileInteractor.swift */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		19767F0D27F8553500C77390 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				19767F1627F857E000C77390 /* ProfilePresenter.swift */,
+			);
+			path = presenter;
+			sourceTree = "<group>";
+		};
+		19767F0E27F8553E00C77390 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				19767F1827F857FA00C77390 /* ProfileRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		19767F0F27F8554500C77390 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				19767F0427F832F500C77390 /* ProfileViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		19767F1027F8555100C77390 /* tableview */ = {
+			isa = PBXGroup;
+			children = (
+				19767F0627F8462800C77390 /* SettingTableViewCell.swift */,
+			);
+			path = tableview;
+			sourceTree = "<group>";
+		};
+		197E34B627F31BE70023D763 /* fooddetail-module */ = {
 			isa = PBXGroup;
 			children = (
 				197E34BB27F31DB80023D763 /* router */,
@@ -437,7 +505,7 @@
 				197E34B827F31D830023D763 /* intercator */,
 				197E34B727F31C0A0023D763 /* protocols */,
 			);
-			path = "foodDetail-module";
+			path = "fooddetail-module";
 			sourceTree = "<group>";
 		};
 		197E34B727F31C0A0023D763 /* protocols */ = {
@@ -757,6 +825,7 @@
 				197E34BF27F324740023D763 /* FoodDetailInteractor.swift in Sources */,
 				1966CA5327F44398001E1568 /* CartProtocols.swift in Sources */,
 				1969F40127F0729B002CB376 /* AppDelegate.swift in Sources */,
+				19767F1727F857E000C77390 /* ProfilePresenter.swift in Sources */,
 				197E34C327F3258C0023D763 /* FoodDetailRouter.swift in Sources */,
 				19179E0D27F74AFD0027D870 /* LoginRouter.swift in Sources */,
 				19211D8C27F1EE7A00722CBA /* HomeInteractor.swift in Sources */,
@@ -780,8 +849,11 @@
 				19211D9027F1EEF100722CBA /* HomeRouter.swift in Sources */,
 				19767F0527F832F500C77390 /* ProfileViewController.swift in Sources */,
 				19767F0927F84F8D00C77390 /* Setting.swift in Sources */,
+				19767F1927F857FA00C77390 /* ProfileRouter.swift in Sources */,
+				19767F1227F857B100C77390 /* ProfileProtocols.swift in Sources */,
 				19179E0727F74AC10027D870 /* LoginProtocols.swift in Sources */,
 				1966CA5727F443B3001E1568 /* CartPresenter.swift in Sources */,
+				19767F1427F857C700C77390 /* ProfileInteractor.swift in Sources */,
 				1989F36C27F63BBD00C31F9A /* RegisterRouter.swift in Sources */,
 				19211D8E27F1EEBD00722CBA /* HomePresenter.swift in Sources */,
 				197E34C727F328FD0023D763 /* FoodDetailResponse.swift in Sources */,
