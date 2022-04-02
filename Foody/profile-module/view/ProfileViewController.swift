@@ -35,6 +35,8 @@ class ProfileViewController: UIViewController {
         settings.append(settingItem1)
         settings.append(settingItem2)
         
+        
+        
         updateUI()
     }
     
@@ -82,6 +84,29 @@ extension ProfileViewController : UITableViewDelegate, UITableViewDataSource
         cell.settingNameLabel.text = settingArray.title
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        
+        let alert = UIAlertController(title: "Language", message: "", preferredStyle: .actionSheet)
+        
+        let turkce = UIAlertAction(title: "Türkçe", style: .default) { action in
+            print("Türkçe")
+        }
+        
+        let english = UIAlertAction(title: "English", style: .default) { action in
+          print("English")
+        }
+        
+        alert.addAction(turkce)
+        alert.addAction(english)
+        
+        present(alert, animated: true, completion: nil)
+        
+        
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
