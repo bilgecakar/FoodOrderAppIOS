@@ -13,6 +13,4 @@ class FoodDetailRouter : PresenterToRouterFoodDetailProtocol
         ref.foodDetailPresenterObject = FoodDetailPresenter()
         ref.foodDetailPresenterObject?.foodDetailInteractor = FoodDetailInteractor()
     }
-    
-    
 }

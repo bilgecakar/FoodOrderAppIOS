@@ -33,5 +33,4 @@ extension HomePresenter : InteractorToPresenterHomePageProtocol
         homepageView?.sendDataToView(foodCount: foodCount)
     }
     
-    
 }

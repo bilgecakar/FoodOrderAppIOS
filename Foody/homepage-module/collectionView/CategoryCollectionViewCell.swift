@@ -12,6 +12,4 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var categoryImage: UIImageView!
     
-    
-    
 }

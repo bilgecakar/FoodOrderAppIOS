@@ -22,7 +22,6 @@ protocol PresenterToInteractorCartProtocol
     
     func showCart()
     func deleteCart(sepet_yemek_id: String, kullanici_adi: String)
-
 }
 
 protocol InteractorToPresenterCartProtocol

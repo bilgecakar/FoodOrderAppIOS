@@ -14,7 +14,9 @@ class HomeInteractor : PresenterToInteractorHomaPageProtocol
     var homepagePresenter: InteractorToPresenterHomePageProtocol?
     
     func showAllFoods() {
+        
         AF.request("http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php",method:.get).response { response in
+            
             if let data = response.data {
                 do {
                     let answer = try JSONDecoder().decode(FoodsResponse.self, from: data)
@@ -35,6 +37,7 @@ class HomeInteractor : PresenterToInteractorHomaPageProtocol
     }
     
     func showFoodCount() {
+        
         let param : Parameters = ["kullanici_adi" : "Blg"]
         
         AF.request("http://kasimadalan.pe.hu/yemekler/sepettekiYemekleriGetir.php", method: .post, parameters: param).responseJSON{ response in
@@ -54,9 +57,6 @@ class HomeInteractor : PresenterToInteractorHomaPageProtocol
                     print(error.localizedDescription)
                 }
             }
-            
         }
-        
     }
-    
 }

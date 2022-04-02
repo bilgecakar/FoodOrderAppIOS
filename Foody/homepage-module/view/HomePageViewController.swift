@@ -18,7 +18,6 @@ class HomePageViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var categoryList = [Categories]()
     var foodList = [Foods]()
-   
     
     var homepagePresenterOnject : ViewToPresenterHomePageProtocol?
     
@@ -34,8 +33,6 @@ class HomePageViewController: UIViewController {
         foodCollectionView.dataSource = self
         
         activityIndicator.startAnimating()
-      
-      
         
         let pizza = Categories(image: "Pizza")
         let iceCream = Categories(image: "IceCream")
@@ -59,12 +56,11 @@ class HomePageViewController: UIViewController {
         categoryCollectionView.collectionViewLayout = categoryTasarim
         
         
-        //Category collectionview tasarim
+        //Food collectionview UI
         let foodTasarim = UICollectionViewFlowLayout()
         foodTasarim.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        foodTasarim.minimumLineSpacing = 10 //Dikey
+        foodTasarim.minimumLineSpacing = 10
         foodTasarim.minimumInteritemSpacing = 10
-        
         let width = foodCollectionView.frame.size.width
         let cellWidht = (width - 30) / 2
         foodTasarim.itemSize = CGSize(width: cellWidht, height: cellWidht*1.1)
@@ -87,13 +83,7 @@ class HomePageViewController: UIViewController {
             destinationVC.food = food
         }
     }
-    
-    
-    
 }
-
-
-
 
 extension HomePageViewController : PresenterToViewHomePageProtocol
 {
@@ -103,21 +93,15 @@ extension HomePageViewController : PresenterToViewHomePageProtocol
         self.tabBarController?.tabBar.items![2].badgeColor = UIColor(named: "SecondyColor")
     }
     
-    
     func sendDataToView(foods: Array<Foods>) {
         
         self.foodList = foods
         DispatchQueue.main.async {
-           
+            
             self.foodCollectionView.reloadData()
-            self.activityIndicator.stopAnimating() //For Start Activity Indicator
-           
+            self.activityIndicator.stopAnimating()
         }
-        
-        
     }
-    
-    
 }
 
 extension HomePageViewController : UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
@@ -150,7 +134,6 @@ extension HomePageViewController : UICollectionViewDelegate, UICollectionViewDat
             cell.layer.masksToBounds = false;
             cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
             
-            
             return cell
         }else{
             let food = foodList[indexPath.row]
@@ -165,8 +148,6 @@ extension HomePageViewController : UICollectionViewDelegate, UICollectionViewDat
                 }
             }
             
-            
-            
             cell.contentView.layer.cornerRadius = 17
             cell.contentView.layer.borderColor = UIColor.clear.cgColor
             cell.contentView.layer.masksToBounds = true;
@@ -179,22 +160,15 @@ extension HomePageViewController : UICollectionViewDelegate, UICollectionViewDat
             
             return cell
         }
- 
-        
-        
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == foodCollectionView
         {
             let food = foodList[indexPath.row]
             performSegue(withIdentifier: "toFoodDetail", sender: food)
-            
-            
+                    
         }
     }
-    
-    
-    
+
 }

@@ -9,7 +9,6 @@ import UIKit
 import Firebase
 class ProfileViewController: UIViewController {
     
-    
     @IBOutlet weak var updateButton: UIButton!
     @IBOutlet weak var settingTableview: UITableView!
     @IBOutlet weak var activeSwitch: UISwitch!
@@ -22,6 +21,7 @@ class ProfileViewController: UIViewController {
     var profilePresenterObject : ViewToPresenterProfileProtocol?
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         ProfileRouter.createModule(ref: self)
@@ -29,13 +29,12 @@ class ProfileViewController: UIViewController {
         settingTableview.delegate = self
         settingTableview.dataSource = self
         
+        //Setting
         let settingItem1 = Setting(title: "Language")
         let settingItem2 = Setting(title: "Log Out")
         
         settings.append(settingItem1)
         settings.append(settingItem2)
-        
-        
         
         updateUI()
     }
@@ -46,17 +45,21 @@ class ProfileViewController: UIViewController {
     
     func updateUI()
     {
+        //Email Textfield UI
         emailTextfield.layer.borderColor = UIColor(named: "PrimaryColor")?.cgColor
         emailTextfield.layer.borderWidth = 1.0
         emailTextfield.layer.cornerRadius = 5
         
+        //Password Textfield UI
         passwordTextfield.layer.borderColor = UIColor(named: "PrimaryColor")?.cgColor
         passwordTextfield.layer.borderWidth = 1.0
         passwordTextfield.layer.cornerRadius = 5
         
+        //White view UI
         field.layer.cornerRadius = 70
         field.layer.maskedCorners = [.layerMinXMinYCorner]
         
+        //Update Button UI
         updateButton.layer.cornerRadius = 10
     }
     
@@ -70,13 +73,13 @@ extension ProfileViewController : PresenterToViewProfileProtocol
         self.emailTextfield.text = email
     }
     
-    
 }
 
 
 extension ProfileViewController : UITableViewDelegate, UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let settingArray = settings[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "settingCell", for: indexPath) as! SettingTableViewCell
@@ -88,6 +91,7 @@ extension ProfileViewController : UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        //Language
         if indexPath.row == 0
         {
             let alert = UIAlertController(title: "Language", message: "", preferredStyle: .actionSheet)
@@ -97,7 +101,7 @@ extension ProfileViewController : UITableViewDelegate, UITableViewDataSource
             }
             
             let english = UIAlertAction(title: "English", style: .default) { action in
-              print("English")
+                print("English")
             }
             
             alert.addAction(turkce)
@@ -105,23 +109,19 @@ extension ProfileViewController : UITableViewDelegate, UITableViewDataSource
             
             present(alert, animated: true, completion: nil)
         }
-        else
+        else //Log out
         {
             do { try Auth.auth().signOut() }
-                catch { print("already logged out") }
-                
-               performSegue(withIdentifier: "toLogin", sender: nil)
-           
+            catch { print("already logged out") }
+            
+            performSegue(withIdentifier: "toLogin", sender: nil)
+            
         }
-      
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return settings.count
     }
     
-    
 }
-
-
-

@@ -12,7 +12,7 @@ protocol ViewToPresenterHomePageProtocol // Presenter
     var homepageInteractor : PresenterToInteractorHomaPageProtocol? {get set}
     var homepageView : PresenterToViewHomePageProtocol? {get set}
     
-   func showFoods()
+    func showFoods()
     func showFoodCount()
 }
 

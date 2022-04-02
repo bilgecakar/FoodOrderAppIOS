@@ -378,8 +378,8 @@
             filePath = "Foody/foodDetail-module/view/FoodsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
             <Locations>
@@ -426,8 +426,8 @@
             filePath = "Foody/foodDetail-module/view/FoodsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -442,8 +442,8 @@
             filePath = "Foody/foodDetail-module/view/FoodsDetailViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -458,8 +458,8 @@
             filePath = "Foody/cart-module/view/CartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "payment(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -474,8 +474,8 @@
             filePath = "Foody/cart-module/view/CartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -490,8 +490,8 @@
             filePath = "Foody/cart-module/view/CartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -506,8 +506,8 @@
             filePath = "Foody/cart-module/view/CartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -522,8 +522,8 @@
             filePath = "Foody/cart-module/view/CartViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>

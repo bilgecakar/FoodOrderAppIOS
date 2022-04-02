@@ -11,22 +11,20 @@ class CartViewController: UIViewController {
     
     
     @IBOutlet weak var cartTableview: UITableView!
-    
     @IBOutlet weak var foodTotalPrice: UILabel!
+    
     var cartFoods = [FoodsDetail]()
     var cartPresenterObject : ViewToPresenterCartProtocol?
     
     var foodsCount = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         cartTableview.delegate = self
         cartTableview.dataSource = self
-        
-        
-       
-        CartRouter.createModule(ref: self)
     
+        CartRouter.createModule(ref: self)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,9 +32,7 @@ class CartViewController: UIViewController {
         
     }
     
-        
     @IBAction func payment(_ sender: Any) {
-        
         
     }
     
@@ -63,7 +59,6 @@ extension CartViewController : PresenterToViewCartProtocol
             
         }
     }
-    
     
 }
 
@@ -94,29 +89,29 @@ extension CartViewController : UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: ""){(contextualAction,view,bool) in
+            let cart = self.cartFoods[indexPath.row]
             
-            let deleteAction = UIContextualAction(style: .destructive, title: ""){(contextualAction,view,bool) in
-                let cart = self.cartFoods[indexPath.row]
-                
-                let alert = UIAlertController(title: "Are you sure want to delete \(cart.yemek_adi!)?", message: "You cannot undo this action", preferredStyle: .alert)
-                
-                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel){ action in }
-                alert.addAction(cancelAction)
-                
-                let yesAction = UIAlertAction(title: "Yes", style: .destructive){ action in
-                    self.cartPresenterObject?.deleteAllCart(sepet_yemek_id: cart.sepet_yemek_id!, kullanici_adi: "Blg")
-                }
-                alert.addAction(yesAction)
-                
-                self.present(alert, animated: true)
+            let alert = UIAlertController(title: "Are you sure want to delete \(cart.yemek_adi!)?", message: "You cannot undo this action", preferredStyle: .alert)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel){ action in }
+            alert.addAction(cancelAction)
+            
+            let yesAction = UIAlertAction(title: "Yes", style: .destructive){ action in
+                self.cartPresenterObject?.deleteAllCart(sepet_yemek_id: cart.sepet_yemek_id!, kullanici_adi: "Blg")
             }
-            deleteAction.backgroundColor = UIColor(named: "ButtonColor")
-            deleteAction.image = UIImage(named: "Delete.png")
+            alert.addAction(yesAction)
             
-            
-            return UISwipeActionsConfiguration(actions: [deleteAction])
-            
+            self.present(alert, animated: true)
         }
+        deleteAction.backgroundColor = UIColor(named: "ButtonColor")
+        deleteAction.image = UIImage(named: "Delete.png")
+        
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+        
+    }
     
 }
 

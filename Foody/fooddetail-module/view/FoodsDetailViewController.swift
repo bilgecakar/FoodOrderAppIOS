@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 
 class FoodsDetailViewController: UIViewController {
-
+    
     
     @IBOutlet weak var plusButton: UIButton!
     @IBOutlet weak var minusButton: UIButton!
@@ -25,7 +25,6 @@ class FoodsDetailViewController: UIViewController {
     
     var foodDetailPresenterObject : ViewToPresenterFoodDetailProtocol?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
@@ -40,7 +39,6 @@ class FoodsDetailViewController: UIViewController {
                 }
             }
             
-                        
         }
         
         FoodDetailRouter.createModule(ref: self)
@@ -60,7 +58,7 @@ class FoodsDetailViewController: UIViewController {
     }
     
     @IBAction func decreaseCount(_ sender: Any) {
-       subtract()
+        subtract()
     }
     
     @IBAction func addCart(_ sender: Any) {
@@ -68,15 +66,12 @@ class FoodsDetailViewController: UIViewController {
             foodDetailPresenterObject?.addAllCart(yemek_adi: f.yemek_adi!, yemek_fiyat: f.yemek_fiyat!, yemek_resim_adi: f.yemek_resim_adi!, yemek_siparis_adet: String(count), kullanici_adi: "Blg")
             
             let alert = UIAlertController(title: "Add To Cart", message: "\(f.yemek_adi!) added to cart!", preferredStyle: .alert)
-                      let OKAction = UIAlertAction(title: "Okay", style: .default){ action in
-                          self.navigationController?.popToRootViewController(animated: true)
-                      }
-                      alert.addAction(OKAction)
-
-                      
-                      self.present(alert, animated: true)
+            let OKAction = UIAlertAction(title: "Okay", style: .default){ action in
+                self.navigationController?.popToRootViewController(animated: true)
+            }
+            alert.addAction(OKAction)
             
-            
+            self.present(alert, animated: true)
             
         }
     }

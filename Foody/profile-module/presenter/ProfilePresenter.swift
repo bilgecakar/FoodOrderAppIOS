@@ -29,8 +29,5 @@ extension ProfilePresenter : InteractorToPresenterProfileProtocol
     func sendDataToPresenter(email: String) {
         profileView?.sendDataToView(email: email)
     }
-    
-  
-    
-    
+
 }

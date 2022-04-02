@@ -17,19 +17,14 @@ class ViewController: UIViewController {
     var loginPresenterObject : ViewToPresenterLoginProtocol?
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         
+        super.viewDidLoad()
         
         updateUI()
         
-        LoginRouter.createModule(ref: self)
-        
+        LoginRouter.createModule(ref: self)        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationItem.title = ""
-        
-    }
     
     func updateUI()
     {
@@ -47,10 +42,8 @@ class ViewController: UIViewController {
         loginButton.layer.cornerRadius = 5
         
         
-        
     }
-    
-    
+        
     @IBAction func signIn(_ sender: Any) {
         performSegue(withIdentifier: "toSignIn", sender: nil)
     }
@@ -75,8 +68,6 @@ class ViewController: UIViewController {
             {
                 print("No user is signed in.")
             }
-            
-            
             
         }
         

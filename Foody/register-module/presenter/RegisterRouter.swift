@@ -13,6 +13,5 @@ class RegisterRouter : PresenterToRouterRegisterProtocol
         ref.registerRresneterObject = RegisterPresenter()
         ref.registerRresneterObject?.registerInteractor = RegisterInteractor()
     }
-        
 }
 

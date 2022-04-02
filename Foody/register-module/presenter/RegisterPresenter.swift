@@ -15,5 +15,4 @@ class RegisterPresenter : ViewToPresenterRegisterProtocol
         registerInteractor?.register(email: email, password: password)
     }
     
-    
 }

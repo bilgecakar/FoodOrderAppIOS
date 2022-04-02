@@ -15,7 +15,4 @@ class LoginPresenter : ViewToPresenterLoginProtocol
         loginInteractor?.login(email: email, password: password)
     }
     
-    
-    
-    
 }

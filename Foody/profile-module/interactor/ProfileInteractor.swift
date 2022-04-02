@@ -23,6 +23,5 @@ class ProfileInteractor : PresenterToInteractorProfileProtocol
     func updateInfo(email: String, password: String) {
         print("Soon...")
     }
-    
-    
+        
 }

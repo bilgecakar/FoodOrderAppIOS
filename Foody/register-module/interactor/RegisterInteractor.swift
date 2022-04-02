@@ -22,14 +22,9 @@ class RegisterInteractor : PresenterToInteractorRegisterProtocol
                 print(user)
             }else
             {
-                print("Kullanici kayit yapamadi.")
+                print("User can't enter.")
             }
-               
-                
-            
         }
         
     }
-    
-    
 }
