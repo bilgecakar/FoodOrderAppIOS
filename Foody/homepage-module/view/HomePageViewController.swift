@@ -12,15 +12,18 @@ import Firebase
 class HomePageViewController: UIViewController {
     
     
-    @IBOutlet weak var foodCollectionView: UICollectionView! 
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var foodCollectionView: UICollectionView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var foodList = [Foods]()
+    var filterFood = [Foods]()
     
     var homepagePresenterOnject : ViewToPresenterHomePageProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchBar.delegate = self
         foodCollectionView.delegate = self
         foodCollectionView.dataSource = self
         
@@ -69,6 +72,7 @@ extension HomePageViewController : PresenterToViewHomePageProtocol
     func sendDataToView(foods: Array<Foods>) {
         
         self.foodList = foods
+        self.filterFood = foods
         DispatchQueue.main.async {
             
             self.foodCollectionView.reloadData()
@@ -77,11 +81,28 @@ extension HomePageViewController : PresenterToViewHomePageProtocol
     }
 }
 
+extension HomePageViewController : UISearchBarDelegate
+{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.filterFood = self.foodList.filter { f in
+            if f.yemek_adi!.lowercased().contains(searchText.lowercased()) {
+                return true
+            }
+            if searchText.isEmpty {
+                return true
+            }
+            return false
+        }
+        self.foodCollectionView.reloadData()
+    }
+}
+
+
 extension HomePageViewController : UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
 {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return foodList.count
+        return filterFood.count
         
         
     }
@@ -89,7 +110,7 @@ extension HomePageViewController : UICollectionViewDelegate, UICollectionViewDat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         
-        let food = foodList[indexPath.row]
+        let food = filterFood[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodCell", for: indexPath) as! FoodsCollectionViewCell
         cell.foodNameLabel.text = food.yemek_adi!
         cell.foodPriceLabel.text = "₺\(food.yemek_fiyat!)"
@@ -117,7 +138,7 @@ extension HomePageViewController : UICollectionViewDelegate, UICollectionViewDat
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let food = foodList[indexPath.row]
+        let food = filterFood[indexPath.row]
         performSegue(withIdentifier: "toFoodDetail", sender: food)
         
         

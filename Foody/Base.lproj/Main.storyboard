@@ -401,6 +401,7 @@
                     <connections>
                         <outlet property="activityIndicator" destination="4XP-WD-IQv" id="MRe-nY-Rwb"/>
                         <outlet property="foodCollectionView" destination="UPz-9e-Lts" id="4uG-wg-lkz"/>
+                        <outlet property="searchBar" destination="7l9-Xr-RMg" id="Bpv-ih-5ti"/>
                         <segue destination="aF5-gS-TeX" kind="show" identifier="toFoodDetail" id="Xxj-lT-Kth"/>
                     </connections>
                 </viewController>
