@@ -14,6 +14,7 @@ class CartViewController: UIViewController {
     @IBOutlet weak var cartTableview: UITableView!
     @IBOutlet weak var foodTotalPrice: UILabel!
     
+    @IBOutlet weak var paymentStack: UIStackView!
     var cartFoods = [FoodsDetail]()
     var cartPresenterObject : ViewToPresenterCartProtocol?
     
@@ -32,6 +33,7 @@ class CartViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         cartPresenterObject?.showAllCart()
+        cartTableview.reloadData()
         
     }
     
@@ -43,6 +45,16 @@ class CartViewController: UIViewController {
         
         cartPresenterObject?.allDeleteItems(carts: cartFoods)
         performSegue(withIdentifier: "toHomepage", sender: nil)
+    }
+    
+    func hiddenUI()
+    {
+        paymentStack.isHidden = true
+    }
+    
+    func notHiddenUI()
+    {
+        paymentStack.isHidden = false
     }
     
     
