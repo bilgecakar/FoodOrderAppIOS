@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="efi-IZ-Nbe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -129,7 +129,7 @@
                         <outlet property="emailTextfield" destination="tdy-oo-AxK" id="r6q-0x-agA"/>
                         <outlet property="loginButton" destination="T62-fe-zr2" id="5fn-D0-I91"/>
                         <outlet property="passwordTextfield" destination="XsG-pf-4aL" id="x4o-cc-pvv"/>
-                        <segue destination="FJb-AE-9E5" kind="presentation" identifier="toSignIn" modalPresentationStyle="fullScreen" id="UVh-sr-lyW"/>
+                        <segue destination="FJb-AE-9E5" kind="presentation" identifier="toSignIn" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="UVh-sr-lyW"/>
                         <segue destination="pbu-i6-cLO" kind="presentation" identifier="toHome" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="FqV-eU-bd8"/>
                     </connections>
                 </viewController>
@@ -238,6 +238,7 @@
                         <outlet property="emailTextfield" destination="jE4-0y-Zsw" id="K44-og-zdp"/>
                         <outlet property="passwordTextfield" destination="bT8-FR-iEu" id="tgB-tR-SKO"/>
                         <outlet property="signInButton" destination="P61-VK-HPh" id="KCc-2k-5Bv"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toStart" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="AgN-kF-t9F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PGU-fd-Tco" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -881,7 +882,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="FqV-eU-bd8"/>
-        <segue reference="5I7-h5-UHn"/>
+        <segue reference="AgN-kF-t9F"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="FoodIconsBg" width="2500" height="979"/>

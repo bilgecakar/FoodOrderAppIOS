@@ -57,7 +57,7 @@ class RegisterViewController: UIViewController {
         {
             action in
             
-            self.navigationController?.popToRootViewController(animated: true)
+            self.performSegue(withIdentifier: "toStart", sender: nil)
         }
         
         alert.addAction(okayAction)
@@ -67,7 +67,7 @@ class RegisterViewController: UIViewController {
     
     
     @IBAction func returnLogin(_ sender: Any) {
-        self.navigationController?.popToRootViewController(animated: true)
+       performSegue(withIdentifier: "toStart", sender: nil)
     }
     
 }
