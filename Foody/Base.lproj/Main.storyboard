@@ -723,51 +723,54 @@
                                 <color key="textColor" name="PrimaryColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sepetin şuan boş görünüyor." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbP-75-8HD">
-                                <rect key="frame" x="85.5" y="436" width="243" height="24"/>
-                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
-                                <color key="textColor" name="PrimaryColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Canının çektiği tüm lezzetler bir tıkla elinde." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-d3-U61">
-                                <rect key="frame" x="49.5" y="464" width="315.5" height="21"/>
-                                <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="15"/>
-                                <color key="textColor" systemColor="systemGrayColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmptyCart" translatesAutoresizingMaskIntoConstraints="NO" id="KvE-nb-83X">
-                                <rect key="frame" x="107" y="224" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="H9k-TA-clM"/>
-                                    <constraint firstAttribute="height" constant="200" id="HUg-8r-6h7"/>
-                                </constraints>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uTB-oH-ebb" userLabel="Empty Cart Stack">
+                                <rect key="frame" x="49.5" y="317.5" width="315.5" height="261"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmptyCart" translatesAutoresizingMaskIntoConstraints="NO" id="KvE-nb-83X">
+                                        <rect key="frame" x="57.5" y="0.0" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="H9k-TA-clM"/>
+                                            <constraint firstAttribute="height" constant="200" id="HUg-8r-6h7"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sepetin şuan boş görünüyor." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbP-75-8HD">
+                                        <rect key="frame" x="36" y="208" width="243" height="24"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                        <color key="textColor" name="PrimaryColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Canının çektiği tüm lezzetler bir tıkla elinde." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-d3-U61">
+                                        <rect key="frame" x="0.0" y="240" width="315.5" height="21"/>
+                                        <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="15"/>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1S8-cP-uMa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="npY-kQ-hsg" firstAttribute="top" secondItem="1S8-cP-uMa" secondAttribute="top" constant="20" id="1i6-yh-LEx"/>
-                            <constraint firstItem="UbP-75-8HD" firstAttribute="centerY" secondItem="FVh-cQ-0Ky" secondAttribute="centerY" id="8Cw-hR-McI"/>
                             <constraint firstItem="nuU-cr-lzK" firstAttribute="trailing" secondItem="1S8-cP-uMa" secondAttribute="trailing" id="FCF-JV-qK0"/>
                             <constraint firstItem="1S8-cP-uMa" firstAttribute="trailing" secondItem="npY-kQ-hsg" secondAttribute="trailing" constant="32" id="PD2-G5-fy6"/>
-                            <constraint firstItem="pqf-d3-U61" firstAttribute="top" secondItem="KvE-nb-83X" secondAttribute="bottom" constant="40" id="QOP-Bg-4oa"/>
                             <constraint firstItem="MUa-k6-e65" firstAttribute="top" secondItem="1S8-cP-uMa" secondAttribute="top" constant="20" id="SFR-K7-3cE"/>
-                            <constraint firstItem="KvE-nb-83X" firstAttribute="top" secondItem="FVh-cQ-0Ky" secondAttribute="topMargin" constant="180" id="Trc-gK-elm"/>
-                            <constraint firstItem="KvE-nb-83X" firstAttribute="centerX" secondItem="FVh-cQ-0Ky" secondAttribute="centerX" id="WD1-gD-5qT"/>
+                            <constraint firstItem="uTB-oH-ebb" firstAttribute="centerY" secondItem="FVh-cQ-0Ky" secondAttribute="centerY" id="Ug1-6q-Ha8"/>
                             <constraint firstItem="npY-kQ-hsg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1S8-cP-uMa" secondAttribute="leading" symbolic="YES" id="aKB-Yf-wIa"/>
                             <constraint firstItem="BWa-6f-pE8" firstAttribute="leading" secondItem="1S8-cP-uMa" secondAttribute="leading" constant="32" id="aOE-hZ-itC"/>
+                            <constraint firstItem="uTB-oH-ebb" firstAttribute="centerX" secondItem="FVh-cQ-0Ky" secondAttribute="centerX" id="akQ-uJ-3LN"/>
                             <constraint firstItem="BWa-6f-pE8" firstAttribute="top" secondItem="nuU-cr-lzK" secondAttribute="bottom" constant="60" id="eec-CV-FLi"/>
                             <constraint firstItem="nuU-cr-lzK" firstAttribute="leading" secondItem="1S8-cP-uMa" secondAttribute="leading" id="fSU-tQ-Q0b"/>
-                            <constraint firstItem="pqf-d3-U61" firstAttribute="centerX" secondItem="FVh-cQ-0Ky" secondAttribute="centerX" id="go3-Aj-j83"/>
                             <constraint firstItem="1S8-cP-uMa" firstAttribute="trailing" secondItem="BWa-6f-pE8" secondAttribute="trailing" constant="32" id="hEh-kU-Qbe"/>
                             <constraint firstItem="MUa-k6-e65" firstAttribute="leading" secondItem="1S8-cP-uMa" secondAttribute="leading" constant="28" id="lq9-84-LWb"/>
-                            <constraint firstItem="UbP-75-8HD" firstAttribute="centerX" secondItem="FVh-cQ-0Ky" secondAttribute="centerX" id="sB1-Ik-Iuw"/>
                             <constraint firstItem="nuU-cr-lzK" firstAttribute="top" secondItem="1S8-cP-uMa" secondAttribute="top" constant="90" id="sNv-E8-vw1"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="cart" catalog="system" id="0jl-W0-A0C"/>
                     <connections>
                         <outlet property="cartTableview" destination="nuU-cr-lzK" id="tbP-S9-Tvf"/>
+                        <outlet property="deleteButton" destination="npY-kQ-hsg" id="b4Y-TH-LFL"/>
+                        <outlet property="emptyCartStack" destination="uTB-oH-ebb" id="lmW-Vb-XTg"/>
                         <outlet property="foodTotalPrice" destination="i6y-hx-dfv" id="mxA-5A-4sC"/>
                         <outlet property="paymentStack" destination="BWa-6f-pE8" id="nY3-LF-Tve"/>
                         <segue destination="pbu-i6-cLO" kind="presentation" identifier="toHomepage" modalPresentationStyle="fullScreen" id="tBi-RV-m8T"/>

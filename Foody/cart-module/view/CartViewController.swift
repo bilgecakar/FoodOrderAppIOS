@@ -14,7 +14,10 @@ class CartViewController: UIViewController {
     @IBOutlet weak var cartTableview: UITableView!
     @IBOutlet weak var foodTotalPrice: UILabel!
     
+    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var emptyCartStack: UIStackView!
     @IBOutlet weak var paymentStack: UIStackView!
+    
     var cartFoods = [FoodsDetail]()
     var cartPresenterObject : ViewToPresenterCartProtocol?
     
@@ -28,14 +31,12 @@ class CartViewController: UIViewController {
         
         CartRouter.createModule(ref: self)
         
-        
+        hiddenUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         cartPresenterObject?.showAllCart()
         cartPresenterObject?.showCount()
-        
-  
         
     }
     
@@ -52,11 +53,16 @@ class CartViewController: UIViewController {
     func hiddenUI()
     {
         paymentStack.isHidden = true
+        emptyCartStack.isHidden = false
+        deleteButton.isHidden = true
+        
     }
     
     func notHiddenUI()
     {
         paymentStack.isHidden = false
+        emptyCartStack.isHidden = true
+        deleteButton.isHidden = false
     }
     
     
@@ -73,6 +79,12 @@ extension CartViewController : PresenterToViewCartProtocol
             self.cartTableview.reloadData()
             self.tabBarController?.tabBar.items![1].badgeValue = "\(self.foodsCount)"
             self.tabBarController?.tabBar.items![1].badgeColor = UIColor(named: "SecondyColor")
+            
+            if self.foodsCount >= 1
+            {
+                
+                self.notHiddenUI()
+            }
             
             print(self.foodsCount)
         
