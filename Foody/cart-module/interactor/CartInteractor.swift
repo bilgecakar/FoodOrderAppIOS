@@ -29,7 +29,7 @@ class CartInteractor : PresenterToInteractorCartProtocol
                     }
                     
                     self.cartPresenter?.sendDataToPresenter(cartList: list)
-                    print(list)
+                  
                     
                 } catch  {
                     print(error.localizedDescription)
@@ -48,7 +48,7 @@ class CartInteractor : PresenterToInteractorCartProtocol
             if let data = response.data {
                 do{
                     if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] {
-                        print(json)
+                      
                         self.showCart()
                         
                     }

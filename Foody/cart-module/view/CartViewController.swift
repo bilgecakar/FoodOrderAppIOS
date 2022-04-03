@@ -18,13 +18,13 @@ class CartViewController: UIViewController {
     var cartPresenterObject : ViewToPresenterCartProtocol?
     
     var foodsCount = 0
-    var total = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         cartTableview.delegate = self
         cartTableview.dataSource = self
-    
+        
         CartRouter.createModule(ref: self)
         
     }
@@ -40,7 +40,7 @@ class CartViewController: UIViewController {
     
     @IBAction func deleteCart(_ sender: Any) {
         
-                
+        
     }
 }
 
@@ -48,19 +48,19 @@ extension CartViewController : PresenterToViewCartProtocol
 {
     func sendDataToView(cartList: Array<FoodsDetail>) {
         self.cartFoods = cartList
-        
+        var total = 0
         
         DispatchQueue.main.async {
             
             self.cartFoods.forEach{   cart_food in
                 
-                self.total = self.total  + (Int(cart_food.yemek_fiyat!)! * Int(cart_food.yemek_siparis_adet!)!)
+                total = total  + (Int(cart_food.yemek_fiyat!)! * Int(cart_food.yemek_siparis_adet!)!)
                 
             }
             
             self.tabBarController?.tabBar.items![1].badgeValue = "\(self.cartFoods.count)"
             
-            self.foodTotalPrice.text = "₺\(self.total)"
+            self.foodTotalPrice.text = "₺\(total)"
             self.cartTableview.reloadData()
             
         }
