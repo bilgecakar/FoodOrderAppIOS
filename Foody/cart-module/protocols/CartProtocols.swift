@@ -15,6 +15,8 @@ protocol ViewToPresenterCartProtocol
     func showAllCart()
     func deleteAllCart(cart: FoodsDetail, kullanici_adi: String)
     func allDeleteItems(carts : Array<FoodsDetail>)
+    func showCount()
+    
     
 }
 
@@ -25,16 +27,19 @@ protocol PresenterToInteractorCartProtocol
     func showCart()
     func deleteCart(cart: FoodsDetail, kullanici_adi: String)
     func allDeleteItems(carts : Array<FoodsDetail>)
+    func showCount()
 }
 
 protocol InteractorToPresenterCartProtocol
 {
     func sendDataToPresenter(cartList : Array<FoodsDetail>)
+    func sendDataToPresenter(foodCount : Int)
 }
 
 protocol PresenterToViewCartProtocol
 {
     func sendDataToView(cartList : Array<FoodsDetail>)
+    func sendDataToView(foodCount : Int)
 }
 
 protocol PresenterToRouterCartProtocol

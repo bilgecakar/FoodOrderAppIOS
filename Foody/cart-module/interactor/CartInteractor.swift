@@ -70,5 +70,30 @@ class CartInteractor : PresenterToInteractorCartProtocol
         }
     }
     
+    func showCount() {
+        
+        let param : Parameters = ["kullanici_adi" : "\(Auth.auth().currentUser?.email ?? "")"]
+        
+        AF.request("http://kasimadalan.pe.hu/yemekler/sepettekiYemekleriGetir.php", method: .post, parameters: param).responseJSON{ response in
+            if let data = response.data
+            {
+                do {
+                    let answer = try JSONDecoder().decode(FoodDetailResponse.self, from: data)
+                    var list = [FoodsDetail]()
+                    if let answerList = answer.sepet_yemekler
+                    {
+                        list = answerList
+                    }
+                    print(list)
+                    
+                    self.cartPresenter?.sendDataToPresenter(foodCount: list.count);
+                    
+                } catch  {
+                    print(error.localizedDescription)
+                }
+            }
+        }
+    }
+    
     
 }

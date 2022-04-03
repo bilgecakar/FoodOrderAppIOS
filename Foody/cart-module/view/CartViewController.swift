@@ -33,7 +33,9 @@ class CartViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         cartPresenterObject?.showAllCart()
-        cartTableview.reloadData()
+        cartPresenterObject?.showCount()
+        
+  
         
     }
     
@@ -63,6 +65,22 @@ class CartViewController: UIViewController {
 
 extension CartViewController : PresenterToViewCartProtocol
 {
+    
+    func sendDataToView(foodCount: Int) {
+        self.foodsCount = foodCount
+        
+        DispatchQueue.main.async {
+            self.cartTableview.reloadData()
+            self.tabBarController?.tabBar.items![1].badgeValue = "\(self.foodsCount)"
+            self.tabBarController?.tabBar.items![1].badgeColor = UIColor(named: "SecondyColor")
+            
+            print(self.foodsCount)
+        
+        }
+        
+    }
+    
+    
     func sendDataToView(cartList: Array<FoodsDetail>) {
         self.cartFoods = cartList
         
@@ -72,24 +90,15 @@ extension CartViewController : PresenterToViewCartProtocol
             
             var total = 0
             
-            self.tabBarController?.tabBar.items![1].badgeValue = self.cartFoods.count == 0 ? nil : "\(self.cartFoods.count)"
-            
             self.cartFoods.forEach{   cart_food in
                 
-                total = total  + (Int(cart_food.yemek_fiyat!)! * Int(cart_food.yemek_siparis_adet!)!)
+                total = total  + (Int(cart_food.yemek_fiyat ?? "0")! * Int(cart_food.yemek_siparis_adet ?? "0")!)
                 
             }
             self.foodTotalPrice.text = "₺\(total)"
         }
         
-        print(self.cartFoods.count)
-        if self.cartFoods.count == 0 {
-            let alert = UIAlertController(title: "Uyarı", message: "Sepetin şu an boş görünüyor.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Yemekleri Listele", style: .default, handler: { (action: UIAlertAction!) in
-                self.performSegue(withIdentifier: "toHomapage", sender: nil)
-            }))
-            self.present(alert, animated: true)
-        }
+       
         
     }
     
@@ -132,6 +141,19 @@ extension CartViewController : UITableViewDelegate, UITableViewDataSource
             self.cartPresenterObject?.deleteAllCart(cart: cart, kullanici_adi: "\(Auth.auth().currentUser?.email ?? "")")
             
             tableView.reloadData()
+            
+            self.foodsCount -= 1
+            
+            self.tabBarController?.tabBar.items![1].badgeValue = "\(self.foodsCount)"
+            
+            if self.foodsCount == 0
+            {
+                self.tabBarController?.tabBar.items![1].badgeValue = nil
+                self.performSegue(withIdentifier: "toHomepage", sender: nil)
+            }
+            print(self.foodsCount)
+            
+       
         }
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
