@@ -16,8 +16,11 @@ class CartPresenter : ViewToPresenterCartProtocol
     func showAllCart() {
         cartInteractor?.showCart()
     }
-    func deleteAllCart(sepet_yemek_id: String, kullanici_adi: String) {
-        cartInteractor?.deleteCart(sepet_yemek_id: sepet_yemek_id, kullanici_adi: kullanici_adi)
+    func deleteAllCart(cart: FoodsDetail, kullanici_adi: String) {
+        cartInteractor?.deleteCart(cart: cart, kullanici_adi: kullanici_adi)
+    }
+    func allDeleteItems(carts: Array<FoodsDetail>) {
+        cartInteractor?.allDeleteItems(carts: carts)
     }
     
     

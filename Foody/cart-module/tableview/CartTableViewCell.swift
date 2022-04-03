@@ -17,19 +17,56 @@ class CartTableViewCell: UITableViewCell {
     @IBOutlet weak var minusButton: UIButton!
     @IBOutlet weak var plusButton: UIButton!
     
-    var count : Int  = 0
+  
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
-    @IBAction func add(_ sender: Any) {
+    
+    @IBAction func addition(_ sender: Any) {
+        add()
     }
     
-    @IBAction func subtract(_ sender: Any) {
+    
+    @IBAction func subtraction(_ sender: Any) {
+        subtract()
+    }
+    
+    func add() {
+        
+        var count = 1
+        if let temp = Int(foodCount.text!)
+        {
+            count = temp
+        }
+        
+        if count >= 1 && count < 20
+        {
+            count += 1
+        }
+        foodCount.text = "\(count)"
+        
+    }
+    
+    func subtract() {
+        
+        var count = 1
+        if let temp = Int(foodCount.text!)
+        {
+            count = temp
+        }
+        
+        if count > 1 && count <= 20
+        {
+            count -= 1
+        }
+        foodCount.text = "\(count)"
+        
     }
 }

@@ -29,7 +29,7 @@ class CartInteractor : PresenterToInteractorCartProtocol
                     }
                     
                     self.cartPresenter?.sendDataToPresenter(cartList: list)
-                  
+                    
                     
                 } catch  {
                     print(error.localizedDescription)
@@ -40,18 +40,20 @@ class CartInteractor : PresenterToInteractorCartProtocol
         
     }
     
-    func deleteCart(sepet_yemek_id: String, kullanici_adi: String) {
+    func deleteCart(cart: FoodsDetail, kullanici_adi: String) {
         
-        let param : Parameters = ["sepet_yemek_id" : sepet_yemek_id, "kullanici_adi" : Auth.auth().currentUser?.email ?? ""]
+        let param : Parameters = ["sepet_yemek_id" : cart.sepet_yemek_id!, "kullanici_adi" : Auth.auth().currentUser?.email ?? ""]
         
-        AF.request("http://kasimadalan.pe.hu/yemekler/sepettenYemekSil.php", method: .post, parameters: param).response{ response in
+        AF.request("http://kasimadalan.pe.hu/yemekler/sepettenYemekSil.php", method: .post, parameters: param).responseJSON{ response in
             if let data = response.data {
                 do{
-                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] {
-                      
-                        self.showCart()
-                        
-                    }
+                    let json = try JSONDecoder().decode(FoodDetailResponse.self, from: data)
+                        if json.success == 1 {
+                            
+                            self.showCart()
+                            
+                        }
+                    
                 }catch{
                     print(error.localizedDescription)
                 }
@@ -59,6 +61,15 @@ class CartInteractor : PresenterToInteractorCartProtocol
             
         }
         
+    }
+    
+    func allDeleteItems(carts : Array<FoodsDetail>)
+    {
+        for cartItem in carts{
+            DispatchQueue.main.async { [weak self] in
+                self?.deleteCart(cart: cartItem, kullanici_adi: Auth.auth().currentUser?.email ?? "")
+            }
+        }
     }
     
     

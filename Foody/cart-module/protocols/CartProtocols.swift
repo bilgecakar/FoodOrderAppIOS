@@ -13,7 +13,9 @@ protocol ViewToPresenterCartProtocol
     var cartView : PresenterToViewCartProtocol? {get set}
     
     func showAllCart()
-    func deleteAllCart(sepet_yemek_id: String, kullanici_adi: String)
+    func deleteAllCart(cart: FoodsDetail, kullanici_adi: String)
+    func allDeleteItems(carts : Array<FoodsDetail>)
+    
 }
 
 protocol PresenterToInteractorCartProtocol
@@ -21,7 +23,8 @@ protocol PresenterToInteractorCartProtocol
     var cartPresenter : InteractorToPresenterCartProtocol? {get set}
     
     func showCart()
-    func deleteCart(sepet_yemek_id: String, kullanici_adi: String)
+    func deleteCart(cart: FoodsDetail, kullanici_adi: String)
+    func allDeleteItems(carts : Array<FoodsDetail>)
 }
 
 protocol InteractorToPresenterCartProtocol

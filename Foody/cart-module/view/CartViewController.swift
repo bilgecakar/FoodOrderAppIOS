@@ -27,6 +27,7 @@ class CartViewController: UIViewController {
         
         CartRouter.createModule(ref: self)
         
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,30 +41,44 @@ class CartViewController: UIViewController {
     
     @IBAction func deleteCart(_ sender: Any) {
         
-        
+        cartPresenterObject?.allDeleteItems(carts: cartFoods)
+        performSegue(withIdentifier: "toHomepage", sender: nil)
     }
+    
+    
 }
+
 
 extension CartViewController : PresenterToViewCartProtocol
 {
     func sendDataToView(cartList: Array<FoodsDetail>) {
         self.cartFoods = cartList
-        var total = 0
+        
         
         DispatchQueue.main.async {
+            self.cartTableview.reloadData()
+            
+            var total = 0
+            
+            self.tabBarController?.tabBar.items![1].badgeValue = self.cartFoods.count == 0 ? nil : "\(self.cartFoods.count)"
             
             self.cartFoods.forEach{   cart_food in
                 
                 total = total  + (Int(cart_food.yemek_fiyat!)! * Int(cart_food.yemek_siparis_adet!)!)
                 
             }
-            
-            self.tabBarController?.tabBar.items![1].badgeValue = "\(self.cartFoods.count)"
-            
             self.foodTotalPrice.text = "₺\(total)"
-            self.cartTableview.reloadData()
-            
         }
+        
+        print(self.cartFoods.count)
+        if self.cartFoods.count == 0 {
+            let alert = UIAlertController(title: "Uyarı", message: "Sepetin şu an boş görünüyor.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Yemekleri Listele", style: .default, handler: { (action: UIAlertAction!) in
+                self.performSegue(withIdentifier: "toHomapage", sender: nil)
+            }))
+            self.present(alert, animated: true)
+        }
+        
     }
     
 }
@@ -96,29 +111,17 @@ extension CartViewController : UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let deleteAction = UIContextualAction(style: .destructive, title: ""){(contextualAction,view,bool) in
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete"){ (contextualAction,view,bool) in
+            
             let cart = self.cartFoods[indexPath.row]
             
-            let alert = UIAlertController(title: "Are you sure want to delete \(cart.yemek_adi!)?", message: "You cannot undo this action", preferredStyle: .alert)
+            self.cartFoods.remove(at: indexPath.row)
             
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel){ action in }
-            alert.addAction(cancelAction)
+            self.cartPresenterObject?.deleteAllCart(cart: cart, kullanici_adi: "\(Auth.auth().currentUser?.email ?? "")")
             
-            let yesAction = UIAlertAction(title: "Yes", style: .destructive){ action in
-                self.cartPresenterObject?.deleteAllCart(sepet_yemek_id: cart.sepet_yemek_id!, kullanici_adi: "\(Auth.auth().currentUser?.email ?? "")")
-                self.cartFoods.removeAll()
-            }
-            alert.addAction(yesAction)
-            
-            self.present(alert, animated: true)
-            
+            tableView.reloadData()
         }
-        deleteAction.backgroundColor = UIColor(named: "SecondyColor")
-        deleteAction.image = UIImage(named: "trash.png")
-        
-        
         return UISwipeActionsConfiguration(actions: [deleteAction])
-        
     }
     
 }

@@ -565,7 +565,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1C-Sw-rOd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4159" y="74"/>
+            <point key="canvasLocation" x="4091" y="45"/>
         </scene>
         <!--Cart View Controller-->
         <scene sceneID="uaZ-6V-ZjB">
@@ -576,7 +576,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nuU-cr-lzK">
-                                <rect key="frame" x="0.0" y="124" width="414" height="500"/>
+                                <rect key="frame" x="0.0" y="114" width="414" height="500"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="500" id="swI-JY-47R"/>
@@ -627,7 +627,7 @@
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain" title="-"/>
                                                                     <connections>
-                                                                        <action selector="subtract:" destination="dzl-fu-ekx" eventType="touchUpInside" id="hma-0k-QIq"/>
+                                                                        <action selector="subtraction:" destination="dzl-fu-ekx" eventType="touchUpInside" id="bQi-Ux-K2G"/>
                                                                     </connections>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v6o-Nq-fC5">
@@ -643,7 +643,7 @@
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain" title="+"/>
                                                                     <connections>
-                                                                        <action selector="add:" destination="dzl-fu-ekx" eventType="touchUpInside" id="zsz-0P-NvP"/>
+                                                                        <action selector="addition:" destination="dzl-fu-ekx" eventType="touchUpInside" id="7fc-wz-5PQ"/>
                                                                     </connections>
                                                                 </button>
                                                             </subviews>
@@ -721,17 +721,18 @@
                             <constraint firstItem="MUa-k6-e65" firstAttribute="top" secondItem="1S8-cP-uMa" secondAttribute="top" constant="20" id="SFR-K7-3cE"/>
                             <constraint firstItem="npY-kQ-hsg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1S8-cP-uMa" secondAttribute="leading" symbolic="YES" id="aKB-Yf-wIa"/>
                             <constraint firstItem="BWa-6f-pE8" firstAttribute="leading" secondItem="1S8-cP-uMa" secondAttribute="leading" constant="32" id="aOE-hZ-itC"/>
-                            <constraint firstItem="BWa-6f-pE8" firstAttribute="top" secondItem="nuU-cr-lzK" secondAttribute="bottom" constant="70" id="eec-CV-FLi"/>
+                            <constraint firstItem="BWa-6f-pE8" firstAttribute="top" secondItem="nuU-cr-lzK" secondAttribute="bottom" constant="80" id="eec-CV-FLi"/>
                             <constraint firstItem="nuU-cr-lzK" firstAttribute="leading" secondItem="1S8-cP-uMa" secondAttribute="leading" id="fSU-tQ-Q0b"/>
                             <constraint firstItem="1S8-cP-uMa" firstAttribute="trailing" secondItem="BWa-6f-pE8" secondAttribute="trailing" constant="32" id="hEh-kU-Qbe"/>
                             <constraint firstItem="MUa-k6-e65" firstAttribute="leading" secondItem="1S8-cP-uMa" secondAttribute="leading" constant="28" id="lq9-84-LWb"/>
-                            <constraint firstItem="nuU-cr-lzK" firstAttribute="top" secondItem="1S8-cP-uMa" secondAttribute="top" constant="80" id="sNv-E8-vw1"/>
+                            <constraint firstItem="nuU-cr-lzK" firstAttribute="top" secondItem="1S8-cP-uMa" secondAttribute="top" constant="70" id="sNv-E8-vw1"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="cart" catalog="system" id="0jl-W0-A0C"/>
                     <connections>
                         <outlet property="cartTableview" destination="nuU-cr-lzK" id="tbP-S9-Tvf"/>
                         <outlet property="foodTotalPrice" destination="i6y-hx-dfv" id="mxA-5A-4sC"/>
+                        <segue destination="pbu-i6-cLO" kind="presentation" identifier="toHomepage" modalPresentationStyle="fullScreen" id="tBi-RV-m8T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IaA-mY-SQV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -857,7 +858,7 @@
         <!--Custom Tab Bar Controller-->
         <scene sceneID="tNt-UE-TEP">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="pbu-i6-cLO" customClass="CustomTabBarController" customModule="Foody" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" hidesBottomBarWhenPushed="YES" id="pbu-i6-cLO" customClass="CustomTabBarController" customModule="Foody" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="cYJ-i2-LJg"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5oL-Sm-O5t">
@@ -879,6 +880,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="tBi-RV-m8T"/>
         <segue reference="5I7-h5-UHn"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -890,10 +892,10 @@
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="PrimaryColor">
-            <color red="0.066666666666666666" green="0.10196078431372549" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.067000001668930054" green="0.10199999809265137" blue="0.17299999296665192" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="SecondyColor">
-            <color red="0.96078431372549022" green="0.70980392156862748" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.96100002527236938" green="0.70999997854232788" blue="0.27099999785423279" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>

@@ -12,9 +12,7 @@ import Firebase
 class HomePageViewController: UIViewController {
     
     
-    @IBOutlet weak var foodCollectionView: UICollectionView!
-    @IBOutlet weak var usernameLabel: UILabel!
-    
+    @IBOutlet weak var foodCollectionView: UICollectionView! 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var foodList = [Foods]()
     
