@@ -1,0 +1,168 @@
+
+/* Class = "UILabel"; text = "D"; ObjectID = "08W-O4-doy"; */
+"08W-O4-doy.text" = "D";
+
+/* Class = "UILabel"; text = "Lezzetli Yemekler"; ObjectID = "0ZM-Ai-KS6"; */
+"0ZM-Ai-KS6.text" = "Delicious Foods";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "0wf-fz-QSp"; */
+"0wf-fz-QSp.text" = "Label";
+
+/* Class = "UILabel"; text = "O"; ObjectID = "442-9C-oe9"; */
+"442-9C-oe9.text" = "O";
+
+/* Class = "UISearchBar"; placeholder = "Ara..."; ObjectID = "7l9-Xr-RMg"; */
+"7l9-Xr-RMg.placeholder" = "Search...";
+
+/* Class = "UISearchBar"; 7l9-Xr-RMg.scopeButtonTitles[0] = "Title"; ObjectID = "7l9-Xr-RMg"; */
+"7l9-Xr-RMg.scopeButtonTitles[0]" = "Title";
+
+/* Class = "UISearchBar"; 7l9-Xr-RMg.scopeButtonTitles[1] = "Title"; ObjectID = "7l9-Xr-RMg"; */
+"7l9-Xr-RMg.scopeButtonTitles[1]" = "Title";
+
+/* Class = "UILabel"; text = "Birbirinden harika yemekleri keşfedelim"; ObjectID = "8Hg-qK-bRs"; */
+"8Hg-qK-bRs.text" = "Let's discover great foods";
+
+/* Class = "UILabel"; text = "Kayıt"; ObjectID = "8yu-kY-iWE"; */
+"8yu-kY-iWE.text" = "Sign Up";
+
+/* Class = "UILabel"; text = "Y"; ObjectID = "ALn-ID-fL1"; */
+"ALn-ID-fL1.text" = "Y";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "ARu-uc-Iea"; */
+"ARu-uc-Iea.text" = "Email";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "BX2-gu-wco"; */
+"BX2-gu-wco.text" = "Label";
+
+/* Class = "UIViewController"; title = "Login"; ObjectID = "BYZ-38-t0r"; */
+"BYZ-38-t0r.title" = "Login";
+
+/* Class = "UIButton"; configuration.title = "+"; ObjectID = "D0F-p6-2L4"; */
+"D0F-p6-2L4.configuration.title" = "+";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "D0F-p6-2L4"; */
+"D0F-p6-2L4.normalTitle" = "Button";
+
+/* Class = "UIViewController"; title = "Register"; ObjectID = "FJb-AE-9E5"; */
+"FJb-AE-9E5.title" = "Register";
+
+/* Class = "UILabel"; text = "$87.00"; ObjectID = "HAF-aH-kjl"; */
+"HAF-aH-kjl.text" = "$87.00";
+
+/* Class = "UIButton"; configuration.title = "Kayıt Ol"; ObjectID = "La7-SZ-JId"; */
+"La7-SZ-JId.configuration.title" = "Sign Up";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "La7-SZ-JId"; */
+"La7-SZ-JId.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Sepetim"; ObjectID = "MUa-k6-e65"; */
+"MUa-k6-e65.text" = "Cart Item";
+
+/* Class = "UIButton"; configuration.title = "Sepete Ekle"; ObjectID = "O9e-nD-HNl"; */
+"O9e-nD-HNl.configuration.title" = "Add To Cart";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "O9e-nD-HNl"; */
+"O9e-nD-HNl.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Giriş Yap"; ObjectID = "OKf-z9-PZ4"; */
+"OKf-z9-PZ4.configuration.title" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "OKf-z9-PZ4"; */
+"OKf-z9-PZ4.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Ayarlar"; ObjectID = "Oao-2R-H7a"; */
+"Oao-2R-H7a.text" = "Settigns";
+
+/* Class = "UIButton"; configuration.title = "-"; ObjectID = "OhP-2L-w2d"; */
+"OhP-2L-w2d.configuration.title" = "-";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "OhP-2L-w2d"; */
+"OhP-2L-w2d.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Kayıt Ol"; ObjectID = "P61-VK-HPh"; */
+"P61-VK-HPh.configuration.title" = "Sign Up";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "P61-VK-HPh"; */
+"P61-VK-HPh.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Giriş Yap"; ObjectID = "T62-fe-zr2"; */
+"T62-fe-zr2.configuration.title" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "T62-fe-zr2"; */
+"T62-fe-zr2.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "U38-Iw-wX6"; */
+"U38-Iw-wX6.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Uvc-zi-tBe"; */
+"Uvc-zi-tBe.text" = "Label";
+
+/* Class = "UILabel"; text = "Giriş"; ObjectID = "Z0g-Vf-f7y"; */
+"Z0g-Vf-f7y.text" = "Login";
+
+/* Class = "UILabel"; text = "Hala hesabın yok mu?"; ObjectID = "Z1V-fg-1hg"; */
+"Z1V-fg-1hg.text" = "Don't have an account?";
+
+/* Class = "UILabel"; text = "HESABIM"; ObjectID = "ZrE-MZ-qsi"; */
+"ZrE-MZ-qsi.text" = "Profile";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "aXg-Yg-Z7M"; */
+"aXg-Yg-Z7M.text" = "1";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "bqB-u8-GcF"; */
+"bqB-u8-GcF.text" = "Email";
+
+/* Class = "UIButton"; configuration.title = "-"; ObjectID = "buS-SZ-SOb"; */
+"buS-SZ-SOb.configuration.title" = "-";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "buS-SZ-SOb"; */
+"buS-SZ-SOb.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Öde"; ObjectID = "cXW-Ii-iVf"; */
+"cXW-Ii-iVf.configuration.title" = "Pay";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "cXW-Ii-iVf"; */
+"cXW-Ii-iVf.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Tutar"; ObjectID = "cbR-FD-che"; */
+"cbR-FD-che.text" = "Total Price";
+
+/* Class = "UINavigationController"; title = " "; ObjectID = "efi-IZ-Nbe"; */
+"efi-IZ-Nbe.title" = " ";
+
+/* Class = "UILabel"; text = "Şifre"; ObjectID = "enO-Xc-h4c"; */
+"enO-Xc-h4c.text" = "Password";
+
+/* Class = "UILabel"; text = "Hesabın var mı?"; ObjectID = "evy-p7-RMW"; */
+"evy-p7-RMW.text" = "Already have an account?";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "jxU-EC-TYX"; */
+"jxU-EC-TYX.text" = "Email";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "kc0-pt-efs"; */
+"kc0-pt-efs.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "npY-kQ-hsg"; */
+"npY-kQ-hsg.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "oaK-c8-VqD"; */
+"oaK-c8-VqD.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "+"; ObjectID = "qTw-h9-hHz"; */
+"qTw-h9-hHz.configuration.title" = "+";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "qTw-h9-hHz"; */
+"qTw-h9-hHz.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "v6o-Nq-fC5"; */
+"v6o-Nq-fC5.text" = "1";
+
+/* Class = "UILabel"; text = "F"; ObjectID = "yap-J0-lxh"; */
+"yap-J0-lxh.text" = "F";
+
+/* Class = "UILabel"; text = "O"; ObjectID = "ykt-za-1I6"; */
+"ykt-za-1I6.text" = "O";
+
+/* Class = "UILabel"; text = "Şifre"; ObjectID = "z1M-70-mMR"; */
+"z1M-70-mMR.text" = "Password";

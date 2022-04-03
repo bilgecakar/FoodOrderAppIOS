@@ -44,14 +44,12 @@ class CartInteractor : PresenterToInteractorCartProtocol
         
         let param : Parameters = ["sepet_yemek_id" : cart.sepet_yemek_id!, "kullanici_adi" : Auth.auth().currentUser?.email ?? ""]
         
-        AF.request("http://kasimadalan.pe.hu/yemekler/sepettenYemekSil.php", method: .post, parameters: param).responseJSON{ response in
+        AF.request("http://kasimadalan.pe.hu/yemekler/sepettenYemekSil.php", method: .post, parameters: param).response{ response in
             if let data = response.data {
                 do{
-                    let json = try JSONDecoder().decode(FoodDetailResponse.self, from: data)
-                        if json.success == 1 {
-                            
-                            self.showCart()
-                            
+                    if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] {
+                        print(json)
+                        self.showCart()
                         }
                     
                 }catch{
