@@ -21,7 +21,7 @@
 "7l9-Xr-RMg.scopeButtonTitles[1]" = "Title";
 
 /* Class = "UILabel"; text = "Birbirinden harika yemekleri keşfedelim"; ObjectID = "8Hg-qK-bRs"; */
-"8Hg-qK-bRs.text" = "Let's discover great foods";
+"8Hg-qK-bRs.text" = "Let's dicover great and yummy foods!";
 
 /* Class = "UILabel"; text = "Kayıt"; ObjectID = "8yu-kY-iWE"; */
 "8yu-kY-iWE.text" = "Sign Up";
@@ -38,12 +38,6 @@
 /* Class = "UIViewController"; title = "Login"; ObjectID = "BYZ-38-t0r"; */
 "BYZ-38-t0r.title" = "Login";
 
-/* Class = "UIButton"; configuration.title = "+"; ObjectID = "D0F-p6-2L4"; */
-"D0F-p6-2L4.configuration.title" = "+";
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "D0F-p6-2L4"; */
-"D0F-p6-2L4.normalTitle" = "Button";
-
 /* Class = "UIViewController"; title = "Register"; ObjectID = "FJb-AE-9E5"; */
 "FJb-AE-9E5.title" = "Register";
 
@@ -57,10 +51,10 @@
 "La7-SZ-JId.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Sepetim"; ObjectID = "MUa-k6-e65"; */
-"MUa-k6-e65.text" = "Cart Item";
+"MUa-k6-e65.text" = "My Basket";
 
 /* Class = "UIButton"; configuration.title = "Sepete Ekle"; ObjectID = "O9e-nD-HNl"; */
-"O9e-nD-HNl.configuration.title" = "Add To Cart";
+"O9e-nD-HNl.configuration.title" = "Add to Cart";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "O9e-nD-HNl"; */
 "O9e-nD-HNl.normalTitle" = "Button";
@@ -72,7 +66,7 @@
 "OKf-z9-PZ4.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Ayarlar"; ObjectID = "Oao-2R-H7a"; */
-"Oao-2R-H7a.text" = "Settigns";
+"Oao-2R-H7a.text" = "Settings";
 
 /* Class = "UIButton"; configuration.title = "-"; ObjectID = "OhP-2L-w2d"; */
 "OhP-2L-w2d.configuration.title" = "-";
@@ -95,6 +89,9 @@
 /* Class = "UILabel"; text = "Label"; ObjectID = "U38-Iw-wX6"; */
 "U38-Iw-wX6.text" = "Label";
 
+/* Class = "UILabel"; text = "Sepetin şuan boş görünüyor."; ObjectID = "UbP-75-8HD"; */
+"UbP-75-8HD.text" = "Your basket is currently empty.";
+
 /* Class = "UILabel"; text = "Label"; ObjectID = "Uvc-zi-tBe"; */
 "Uvc-zi-tBe.text" = "Label";
 
@@ -105,19 +102,13 @@
 "Z1V-fg-1hg.text" = "Don't have an account?";
 
 /* Class = "UILabel"; text = "HESABIM"; ObjectID = "ZrE-MZ-qsi"; */
-"ZrE-MZ-qsi.text" = "Profile";
+"ZrE-MZ-qsi.text" = "MY ACCOUNT";
 
 /* Class = "UILabel"; text = "1"; ObjectID = "aXg-Yg-Z7M"; */
 "aXg-Yg-Z7M.text" = "1";
 
 /* Class = "UILabel"; text = "Email"; ObjectID = "bqB-u8-GcF"; */
 "bqB-u8-GcF.text" = "Email";
-
-/* Class = "UIButton"; configuration.title = "-"; ObjectID = "buS-SZ-SOb"; */
-"buS-SZ-SOb.configuration.title" = "-";
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "buS-SZ-SOb"; */
-"buS-SZ-SOb.normalTitle" = "Button";
 
 /* Class = "UIButton"; configuration.title = "Öde"; ObjectID = "cXW-Ii-iVf"; */
 "cXW-Ii-iVf.configuration.title" = "Pay";
@@ -137,6 +128,9 @@
 /* Class = "UILabel"; text = "Hesabın var mı?"; ObjectID = "evy-p7-RMW"; */
 "evy-p7-RMW.text" = "Already have an account?";
 
+/* Class = "UILabel"; text = "₺0"; ObjectID = "i6y-hx-dfv"; */
+"i6y-hx-dfv.text" = "₺0";
+
 /* Class = "UILabel"; text = "Email"; ObjectID = "jxU-EC-TYX"; */
 "jxU-EC-TYX.text" = "Email";
 
@@ -149,6 +143,9 @@
 /* Class = "UILabel"; text = "Label"; ObjectID = "oaK-c8-VqD"; */
 "oaK-c8-VqD.text" = "Label";
 
+/* Class = "UILabel"; text = "Canının çektiği tüm lezzetler bir tıkla elinde."; ObjectID = "pqf-d3-U61"; */
+"pqf-d3-U61.text" = "Are you ready to discover all the food that you desire?";
+
 /* Class = "UIButton"; configuration.title = "+"; ObjectID = "qTw-h9-hHz"; */
 "qTw-h9-hHz.configuration.title" = "+";
 
@@ -157,6 +154,9 @@
 
 /* Class = "UILabel"; text = "1"; ObjectID = "v6o-Nq-fC5"; */
 "v6o-Nq-fC5.text" = "1";
+
+/* Class = "UILabel"; text = "Tutar"; ObjectID = "x00-lu-PXA"; */
+"x00-lu-PXA.text" = "Total Price";
 
 /* Class = "UILabel"; text = "F"; ObjectID = "yap-J0-lxh"; */
 "yap-J0-lxh.text" = "F";

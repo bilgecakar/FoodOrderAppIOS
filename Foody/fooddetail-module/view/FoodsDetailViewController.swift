@@ -31,7 +31,7 @@ class FoodsDetailViewController: UIViewController {
         
         if let f = food{
             foodNameLabel.text = f.yemek_adi
-            foodPriceLabel.text = "₺\(f.yemek_fiyat!)"
+            foodPriceLabel.text = "₺\(f.yemek_fiyat!).00"
             if let url = URL(string : "http://kasimadalan.pe.hu/yemekler/resimler/\(f.yemek_resim_adi!)")
             {
                 DispatchQueue.main.async {
@@ -88,7 +88,7 @@ class FoodsDetailViewController: UIViewController {
         if let f = food
         {
             let dataPrice = Int(f.yemek_fiyat!)
-            foodPriceLabel.text = "₺\(dataPrice! * count)"
+            foodPriceLabel.text = "₺\(dataPrice! * count).00"
         }
     }
     
@@ -103,7 +103,7 @@ class FoodsDetailViewController: UIViewController {
         if let f = food
         {
             let dataPrice = Int(f.yemek_fiyat!)
-            foodPriceLabel.text = "₺\(dataPrice! * count)"
+            foodPriceLabel.text = "₺\(dataPrice! * count).00"
         }
     }
     

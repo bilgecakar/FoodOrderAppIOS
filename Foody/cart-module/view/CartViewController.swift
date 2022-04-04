@@ -107,7 +107,7 @@ extension CartViewController : PresenterToViewCartProtocol
                 total = total  + (Int(cart_food.yemek_fiyat ?? "0")! * Int(cart_food.yemek_siparis_adet ?? "0")!)
                 
             }
-            self.foodTotalPrice.text = "₺\(total)"
+            self.foodTotalPrice.text = "₺\(total).00"
         }
     }
     
@@ -125,7 +125,7 @@ extension CartViewController : UITableViewDelegate, UITableViewDataSource
         let cartFood = cartFoods[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cartCell", for: indexPath) as! CartTableViewCell
         cell.foodNameLabel.text = cartFood.yemek_adi!
-        cell.foodPriceLabel.text = "₺\(Int(cartFood.yemek_fiyat!)!)"
+        cell.foodPriceLabel.text = "₺\(Int(cartFood.yemek_fiyat!)!).00"
         cell.foodCount.text = "\(cartFood.yemek_siparis_adet!) adet"
         
         if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(cartFood.yemek_resim_adi!)")
