@@ -20,7 +20,7 @@ class CartViewController: UIViewController {
     
     var cartFoods = [FoodsDetail]()
     var cartPresenterObject : ViewToPresenterCartProtocol?
-    
+    var click : Bool = false
     var foodsCount = 0
     
     override func viewDidLoad() {
@@ -41,13 +41,14 @@ class CartViewController: UIViewController {
     }
     
     @IBAction func payment(_ sender: Any) {
+    
         
     }
     
     @IBAction func deleteCart(_ sender: Any) {
         
-        cartPresenterObject?.allDeleteItems(carts: cartFoods)
-        performSegue(withIdentifier: "toHomepage", sender: nil)
+        self.cartPresenterObject?.allDeleteItems(carts: cartFoods)
+        self.performSegue(withIdentifier: "toHomepage", sender: nil)
     }
     
     func hiddenUI()
