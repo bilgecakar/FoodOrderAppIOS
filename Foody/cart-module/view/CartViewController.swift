@@ -87,7 +87,7 @@ extension CartViewController : PresenterToViewCartProtocol
             }
             
             print(self.foodsCount)
-        
+            
         }
         
     }
@@ -109,9 +109,6 @@ extension CartViewController : PresenterToViewCartProtocol
             }
             self.foodTotalPrice.text = "₺\(total)"
         }
-        
-       
-        
     }
     
 }
@@ -129,7 +126,7 @@ extension CartViewController : UITableViewDelegate, UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "cartCell", for: indexPath) as! CartTableViewCell
         cell.foodNameLabel.text = cartFood.yemek_adi!
         cell.foodPriceLabel.text = "₺\(Int(cartFood.yemek_fiyat!)!)"
-        cell.foodCount.text = cartFood.yemek_siparis_adet!
+        cell.foodCount.text = "\(cartFood.yemek_siparis_adet!) adet"
         
         if let url = URL(string: "http://kasimadalan.pe.hu/yemekler/resimler/\(cartFood.yemek_resim_adi!)")
         {
@@ -144,7 +141,7 @@ extension CartViewController : UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete"){ (contextualAction,view,bool) in
+        let deleteAction = UIContextualAction(style: .destructive, title: ""){ (contextualAction,view,bool) in
             
             let cart = self.cartFoods[indexPath.row]
             
@@ -165,8 +162,13 @@ extension CartViewController : UITableViewDelegate, UITableViewDataSource
             }
             print(self.foodsCount)
             
-       
+            
         }
+        
+        deleteAction.backgroundColor = UIColor(named: "SecondyColor")
+        deleteAction.image = UIImage(systemName: "trash.fill")
+        
+        
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
     

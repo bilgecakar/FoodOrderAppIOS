@@ -112,8 +112,6 @@
 		19211D8D27F1EEBD00722CBA /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		19211D8F27F1EEF100722CBA /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		19211D9927F24C3500722CBA /* FoodsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsResponse.swift; sourceTree = "<group>"; };
-		195EDAF627F9F79800D9D5DE /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Main.strings"; sourceTree = "<group>"; };
-		195EDAF727F9F79800D9D5DE /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		1966CA4727F442D9001E1568 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		1966CA4927F4430D001E1568 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		1966CA5227F44398001E1568 /* CartProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartProtocols.swift; sourceTree = "<group>"; };
@@ -740,7 +738,6 @@
 			knownRegions = (
 				en,
 				Base,
-				"en-GB",
 			);
 			mainGroup = 1969F3F427F0729A002CB376;
 			packageReferences = (
@@ -892,7 +889,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				1969F40727F0729B002CB376 /* Base */,
-				195EDAF627F9F79800D9D5DE /* en-GB */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -901,7 +897,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				1969F40C27F072A0002CB376 /* Base */,
-				195EDAF727F9F79800D9D5DE /* en-GB */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
